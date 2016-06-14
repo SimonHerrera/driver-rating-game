@@ -1,0 +1,23 @@
+{
+  "name": "driver-rating-game",
+  "description": "How's my driving(game)",
+  "main": "index.js",
+  "authors": [
+    "Simon Herrera"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/SimonHerrera/driver-rating-game",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-route": "^1.5.6",
+    "firebase": "^3.0.4"
+  }
+}

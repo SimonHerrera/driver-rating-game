@@ -1,0 +1,22 @@
+{
+  "name": "driver-rating-game",
+  "version": "1.0.0",
+  "description": "How's my driving(game)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonHerrera/driver-rating-game.git"
+  },
+  "author": "Simon Herrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimonHerrera/driver-rating-game/issues"
+  },
+  "homepage": "https://github.com/SimonHerrera/driver-rating-game#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}
