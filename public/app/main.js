@@ -1,2 +1,7 @@
-var test = 'This script is working'
-console.log("Test Statement: ", test);
+angular.module('driving', ['ngRoute']);
+
+//bottom of page
+
+// $('#register').click(function() {
+//   firebase.auth().signout();
+// });
