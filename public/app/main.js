@@ -2,6 +2,6 @@ angular.module('driving', ['ngRoute']);
 
 //bottom of page
 
-// $('#register').click(function() {
+// $('#logout').click(function() {
 //   firebase.auth().signout();
 // });

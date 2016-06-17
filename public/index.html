@@ -9,10 +9,22 @@
   </head>
   <body>
 
-  <div ng-app="driving">
-      <div ng-view>
+
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+
+          <!-- <a href="#/" class="nav-left"><img src="img/crash.png"> --></a>
+          <a href="#/" id="logout" class="btn btn-default navbar-btn">Logout</a>
+        </div>
       </div>
-  </div>
+    </nav>
+
+
+    <div ng-app="driving">
+        <div ng-view>
+        </div>
+    </div>
 
     <!-- Dependency Scripts -->
     <script src="lib/angular/angular.min.js" type="text/javascript"></script>
@@ -24,7 +36,26 @@
     <script src="app/firebase.config.js" type="text/javascript"></script>
     <script src="app/config.js" type="text/javascript"></script>
     <script src="app/constants.js" type="text/javascript"></script>
+
+    <script src="app/auth/authFactory.js" type="text/javascript"></script>
+    <script src="app/auth/login.ctrl.js" type="text/javascript"></script>
+
+    <script src="app/help/helpFactory.js" type="text/javascript"></script>
+    <script src="app/help/help.ctrl.js" type="text/javascript"></script>
+
     <script src="app/landing/landingFactory.js" type="text/javascript"></script>
-  <script src="app/landing/landing.ctrl.js" type="text/javascript"></script>
+    <script src="app/landing/landing.ctrl.js" type="text/javascript"></script>
+
+    <script src="app/rateDriver/rateDriverFactory.js" type="text/javascript"></script>
+    <script src="app/rateDriver/rateDriver.ctrl.js" type="text/javascript"></script>
+
+    <script src="app/searchDriver/searchDriverFactory.js" type="text/javascript"></script>
+    <script src="app/searchDriver/searchDriver.ctrl.js" type="text/javascript"></script>
+
+    <script src="app/userPage/userPageFactory.js" type="text/javascript"></script>
+    <script src="app/userPage/userPage.ctrl.js" type="text/javascript"></script>
+
+    <script src="app/viewLeaders/viewLeadersFactory.js" type="text/javascript"></script>
+    <script src="app/viewLeaders/viewLeaders.ctrl.js" type="text/javascript"></script>
   </body>
 </html>

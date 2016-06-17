@@ -15,7 +15,49 @@ angular.module('driving')
     })
     .when("/register", {
       templateUrl: "app/auth/register.html",
-      controller: "RegisterCtrl",
+      controller: "LoginCtrl",
       controllerAs: "auth"
-    });
+    })
+    .when("/logout", {
+      template: "",
+      controller: "LogoutCtrl",
+      controllerAs: "auth"
+    })
+    .when("/deleteAccount", {
+      templateUrl: "app/auth/deleteAccount.html",
+      controller: "LoginCtrl",
+      controllerAs: "auth"
+    })
+
+    //user page
+    .when("/userPage", {
+      templateUrl: "app/userPage/userPage.html",
+      controller: "UserPageCtrl",
+      controllerAs: "userPage"
+    })
+
+    //user options
+    .when("/rateDriver", {
+      templateUrl: "app/rateDriver/rateDriver.html",
+      controller: "RateDriverCtrl",
+      controllerAs: "rateDriver"
+    })
+    .when("/searchDriver", {
+      templateUrl: "app/searchDriver/searchDriver.html",
+      controller: "SearchDriverCtrl",
+      controllerAs: "searchDriver"
+    })
+    .when("/viewLeaders", {
+      templateUrl: "app/viewLeaders/viewLeaders.html",
+      controller: "ViewLeadersCtrl",
+      controllerAs: "viewLeaders"
+    })
+
+    //option from all pages except auth
+    .when("/help", {
+      templateUrl: "app/help/help.html",
+      controller: "HelpCtrl",
+      controllerAs: "help"
+    })
+
   });
