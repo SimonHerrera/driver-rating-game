@@ -15,13 +15,8 @@ angular.module('driving')
     })
     .when("/register", {
       templateUrl: "app/auth/register.html",
-      controller: "LoginCtrl",
-      controllerAs: "auth"
-    })
-    .when("/logout", {
-      template: "",
-      controller: "LogoutCtrl",
-      controllerAs: "auth"
+      controller: "RegisterCtrl",
+      controllerAs: "register"
     })
     .when("/deleteAccount", {
       templateUrl: "app/auth/deleteAccount.html",

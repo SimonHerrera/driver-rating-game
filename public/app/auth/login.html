@@ -2,6 +2,12 @@
 
 <p>Enter your user name and password</p>
 
+  <form ng-submit="auth.login()">
+    <input type="email" ng-model="auth.user.email" placeholder="email" />
+    <input type="password" ng-model="auth.user.password" placeholder="password" />
+    <input class="btn btn-primary" type="submit" value="Login"/>
+  </form>
 
+<!--
 <a href="#/userPage" class="btn btn-primary">Login</a>
-<a href="#/help" class="btn btn-primary">Help</a>
+<a href="#/help" class="btn btn-primary">Help</a> -->
