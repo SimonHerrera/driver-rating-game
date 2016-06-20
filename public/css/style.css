@@ -10,3 +10,19 @@ h1 {
 nav a{
   display: inline-block;
 }
+
+datalist {
+  width: 200px;
+}
+
+datalist {
+  font-size: 2em
+}
+
+.datalist-width {
+  width: 90%;
+}
+
+.datalist-style {
+  font-size: 1.3em
+}

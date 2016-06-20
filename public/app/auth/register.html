@@ -12,7 +12,7 @@
   <label for="plate-input">Enter Your License Plate Info:</label>
     <div>
       <!-- name in ng-model ="" passed to register controller -->
-      <input ng-model="register.plate" type="text" id="plate-input" placeholder="Plate#" list="states">
+      <input ng-model="register.plate" type="text" id="plate-input" placeholder="Plate#" list="states" required class="datalist-style">
       <datalist  id="states">
         <option value="">N/A</option>
         <option value="AK">AK</option>

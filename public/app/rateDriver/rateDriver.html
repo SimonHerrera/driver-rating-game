@@ -8,7 +8,7 @@
   <label for="plate-input">Enter Your License Plate Info:</label>
     <div>
       <!-- name in ng-model ="" passed to register controller -->
-      <input ng-model="rateDriver.plate" type="text" id="plate-input" placeholder="Plate#" list="states">
+      <input ng-model="rateDriver.plate" type="text" id="plate-input" placeholder="Plate#" list="states" required class="datalist-style">
       <datalist  id="states">
         <option value="">N/A</option>
         <option value="AK">AK</option>
@@ -72,22 +72,26 @@
       <a href="#/rateDriver" class="btn btn-primary">0</a>
       <p>select +10 -10 0 and then drop down input field</p>
 
+      <label>Points to Apply to this Message:</label>
+      <input type="radio" name="msgScore" value="+10Points">+ 10 Points
+      <input type="radio" name="msgScore" value="-10Points">- 10 Points
+      <input type="radio" name="msgScore" value="Neutral" checked="checked" >Neutral
+
     </div>
 
     <div>
       <label for="rate-driver">Select a Review or type your own:</label>
     </div>
     <div>
-      <input ng-model="rateDriver.message" type="text" id="message-input" placeholder="Your Thoughts on This Driver" list="messages" maxlength="100">
+      <input ng-model="rateDriver.message" type="text" id="message-input" placeholder="Your Thoughts" list="messages" maxlength="100" class="datalist-width datalist-style">
       <datalist  id="messages">
-          <option disabled selected> -- Select a Message -- </option>
-          <option></option>
+          <option value="Very courteous Driver, wish there were more like you!!!">Very courteous Driver, wish there were more like you!!!</option>
           <option value="How about you not pull into traffic at such a slow speeds!!!">How about you not pull into traffic at such a slow speeds!!!</option>
           <option value="Gas pedal is on the right, why don't you try to go the speed limit!!!">Gas pedal is on the right, why don't you try to go the speed limit!!!</option>
           <option value="Get off your phone and watch the road!!!">Get off your phone and watch the road!!!</option>
           <option value="Left Lane Loser, get over and let the rest of us pass!!!">Left Lane Loser, get over and let the rest of us pass!!!</option>
           <option value="Hey Lead Foot, where's the fire!!!">Hey Lead Foot, where's the fire!!!</option>
-          <option velue="Next time you park this close could you plase leave me a can opener!!!">Next time you park this close could you plase leave me a can opener!!!</option>
+          <option velue="Next time you park this close could you please leave me a can opener!!!">Next time you park this close could you please leave me a can opener!!!</option>
       </select>
     </div>
 
