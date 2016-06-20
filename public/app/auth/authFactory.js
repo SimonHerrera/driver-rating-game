@@ -34,7 +34,7 @@ angular.module('driving')
           state: state,
           zip: zip
         } //tried a put wanting it to update but it created a new entry - postman updates empty fields
-        $http.post('https://hows-my-driving-65bc4.firebaseio.com/license.json', licenseObj )
+        $http.post('https://hows-my-driving-65bc4.firebaseio.com/license.json', licenseObj)
       }
 
 

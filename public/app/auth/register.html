@@ -1,13 +1,11 @@
 <h1>Registration page</h1>
 
-<p>Enter your license plate #</p>
+<!-- <p>Enter your license plate #</p>
 <p>(state drop down and 7 digits. If less digits end with dashes)</p>
 <p>Enter your user name and password</p>
-
-<!-- add for search use -->
 <p>Enter your city</p>
 <p>Enter your state</p>
-<p>Enter your zip code</p>
+<p>Enter your zip code</p> -->
 
 <form ng-submit="register.sendRegInfo()">
   <div class="form-group">
@@ -77,7 +75,7 @@
       <input ng-model="register.userName" type="text" id="user-name" placeholder="Your User Name"/>
     </div>
     <div>
-      <label for="city-name">City"</label>
+      <label for="city-name">City:</label>
       <input ng-model="register.city" type="text" id="city-name" placeholder="Your City" />
     </div>
     <div>
