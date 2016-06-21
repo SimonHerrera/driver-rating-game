@@ -6,11 +6,9 @@ angular.module('driving')
     console.log("Rate Driver Controller is Working" );
 
     rateDriver.sendRateInfo = function () {
-
+        //no matter what - send plate and message to messages
         RateDriverFactory.sendRateInfo(rateDriver.plate, rateDriver.message)
-        //need to send this info with userName, city, state, zip all empty
-              //check if plate key exists add modifier if not create this record below
-
+        //then check IF plate key exists add modifier if not run ELSE create this record below
         .then(() => {
           firebase.database().ref('license').orderByChild('plate').equalTo(rateDriver.plate).once('value', (snapshot) => {
             var foundUser = snapshot.val()
@@ -21,15 +19,13 @@ angular.module('driving')
                 })
               }
             } else {
+              //need to send this info with userName, city, state, zip all empty
               AuthFactory.sendLicenseInfo(rateDriver.plate, "", "", "", "", rateDriver.modifier)
             }
-
           // console.log(snapshot.val() );
           // console.log(rateDriver.plate );
-
           })
-        })//modifier at end pulled from radio button
-
+        })
         .then(() => $location.path('/userPage'))
         .catch(() => alert('Failed'))
     }

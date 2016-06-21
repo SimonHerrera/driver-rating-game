@@ -35,9 +35,18 @@ angular.module('driving')
           zip: zip,
           score: 5000 + modifier
         } //tried a put wanting it to update but it created a new entry - postman updates empty fields
-        $http.post('https://hows-my-driving-65bc4.firebaseio.com/license.json', licenseObj)
-      }
+        return $http.post('https://hows-my-driving-65bc4.firebaseio.com/license.json', licenseObj)
+      },
 
+      updateLicenseInfo(key, userName,city, state, zip) {
+        var updateLicenseObj = {
+          userName: userName,
+          city: city,
+          state: state,
+          zip: zip
+        }
+        $http.patch(`https://hows-my-driving-65bc4.firebaseio.com/license/${key}.json`, updateLicenseObj)
+      }
 
       //this allows to tie current user to rate and reg ctrl
       //which will create username, state, zip, city and then
