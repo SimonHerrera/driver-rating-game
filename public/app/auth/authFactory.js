@@ -26,13 +26,14 @@ angular.module('driving')
         ))
       },
       //items passed into fn below are put into licenseObj and sent to firebase
-      sendLicenseInfo(plate, userName, city, state, zip) { console.log("here is plate", plate);
+      sendLicenseInfo(plate, userName, city, state, zip, modifier) { console.log("here is plate", plate);
         var licenseObj = {
           plate: plate,
           userName: userName,//should camelcase?
           city: city,
           state: state,
-          zip: zip
+          zip: zip,
+          score: 5000 + modifier
         } //tried a put wanting it to update but it created a new entry - postman updates empty fields
         $http.post('https://hows-my-driving-65bc4.firebaseio.com/license.json', licenseObj)
       }

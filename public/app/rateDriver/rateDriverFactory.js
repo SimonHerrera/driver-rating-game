@@ -7,7 +7,7 @@ angular.module('driving')
       sendRateInfo(ratedPlate, ratedMessage) {
       var messageObj = {
         plate: ratedPlate,
-        message: ratedMessage//should camelcase?
+        message: ratedMessage
         // userMessage: userMessage
         } //will need to create empty license object with empty city, state, zip, userName
 

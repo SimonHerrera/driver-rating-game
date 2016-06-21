@@ -14,7 +14,7 @@ angular.module('driving')
 
         //next line passes these items to authFactoy into sendLicenseInfo
         .then(() => AuthFactory.sendLicenseInfo
-        (register.plate, register.userName, register.city, register.state, register.zip))
+        (register.plate, register.userName, register.city, register.state, register.zip, 0))
         .then(() => $location.path('/userPage'))
         .catch(() => alert('It appears you may already be registered!'))
     }

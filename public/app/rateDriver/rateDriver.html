@@ -5,7 +5,7 @@
 
 <form ng-submit="rateDriver.sendRateInfo()">
   <div class="form-group">
-  <label for="plate-input">Enter Your License Plate Info:</label>
+  <label for="plate-input">Enter License Plate Info:</label>
     <div>
       <!-- name in ng-model ="" passed to register controller -->
       <input ng-model="rateDriver.plate" type="text" id="plate-input" placeholder="Plate#" list="states" required class="datalist-style">
@@ -73,9 +73,9 @@
       <p>select +10 -10 0 and then drop down input field</p>
 
       <label>Points to Apply to this Message:</label>
-      <input type="radio" name="msgScore" value="+10Points">+ 10 Points
-      <input type="radio" name="msgScore" value="-10Points">- 10 Points
-      <input type="radio" name="msgScore" value="Neutral" checked="checked" >Neutral
+      <input ng-model="modifier" type="radio" name="msgScore" value="10">+ 10 Points
+      <input ng-model="modifier" type="radio" name="msgScore" value="-10">- 10 Points
+      <input ng-model="modifier" type="radio" name="msgScore" value="0" checked="checked" >Neutral
 
     </div>
 

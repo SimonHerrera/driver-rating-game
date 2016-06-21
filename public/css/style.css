@@ -15,12 +15,8 @@ datalist {
   width: 200px;
 }
 
-datalist {
-  font-size: 2em
-}
-
 .datalist-width {
-  width: 90%;
+  width: 70%;
 }
 
 .datalist-style {
