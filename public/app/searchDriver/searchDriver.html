@@ -1,15 +1,27 @@
 <h1>Search Driver</h1>
 
-<p>Search a License Plate(Input #)</p>
+<p>Search a License Plate(Input # - submit shows that user, messages, score, overall rank</p>
 
-<p>Enter or Submit button to initiate search</p>
-<a href="#/searchDriver" class="btn btn-primary">Submit</a>
+<p> is pulling from registered user licence.score and from messages is showing messages - firebase showing rank</p>
 
-<p>Shows results and displays simiar to userPage - Shows Lic # - Rank - Score and all messages below</p>
+  <label for="user-name">Enter the Plate Number you are looking for:</label>
+  <input type="text" placeholder="Plate Search" ng-model="search">
+
+
+<h3>OR</h3>
+
+<form ng-submit="searchDriver.searchDriverInfo()">
+  <div>
+    <label for="user-name">Enter the Plate Number you are looking for:</label>
+    <input ng-model="FILLINLATER" type="text" id="plate-search" placeholder="Plate Search"/>
+  </div>
+
+  <input class="btn btn-primary" type="submit" value="Run Search" required/>
+</form>
 
 <p>Maybe a button, (Rate this driver) takes you to RateDriver page with lic# populated</p>
 
+<a href="#/userPage" class="btn btn-primary">Home</a>
 <a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
-<a href="#/searchDriver" class="btn btn-primary">Search</a>
 <a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
 <a href="#/help" class="btn btn-primary">Help</a>

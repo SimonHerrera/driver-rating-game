@@ -1,10 +1,18 @@
 <h1>Leader Board</h1>
 
-<p>Default View shows Top 10 AND Current User at bottom with Score and Rank for all</p>
-
-<p>Search a License Plate(Input #)</p>
+<p>Initail View shows Top 10 AND MAYBE Current User at bottom with Score and Rank for all</p>
 
 <p>(Have results narrow as typed)</p>
+<p>(will show plate#, score, overall rank)
+<form ng-submit="viewLeaders.viewLeadersInfo()">
+  <div>
+    <label for="user-name">Enter the Plate Number you are looking for:</label>
+    <input ng-model="FILLINLATER" type="text" id="plate-search" placeholder="Plate Search"/>
+  </div>
+
+</form>
+  <!-- <input class="btn btn-primary" type="submit" value="Run Search" required/> -->
+
 
 <p>OR THEY CAN SEARCH THIS WAY LISTED BELOW</p>
 
@@ -12,8 +20,8 @@
 
 <p>Filters ON/OFF or Maybe add ability to click on user from here and then opens the search driver page with lic# populated - then might need a back button too but only if got there this way</p>
 
+<a href="#/userPage" class="btn btn-primary">Home</a>
 <a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
 <a href="#/searchDriver" class="btn btn-primary">Search</a>
-<a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
 
 <a href="#/help" class="btn btn-primary">Help</a>

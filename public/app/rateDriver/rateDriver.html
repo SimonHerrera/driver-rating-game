@@ -1,8 +1,5 @@
 <h1>Rate Driver</h1>
 
-<p>Input/Search a License Plate(Input #)</p>
-
-
 <form ng-submit="rateDriver.sendRateInfo()">
   <div class="form-group">
   <label for="plate-input">Enter License Plate Info:</label>
@@ -66,16 +63,16 @@
       </datalist>
     </div>
     <div>
-      <p>Select Points to attach to message</p>
+<!--       <p>Select Points to attach to message</p>
       <a href="#/rateDriver" class="btn btn-primary">+10</a>
       <a href="#/rateDriver" class="btn btn-primary">-10</a>
       <a href="#/rateDriver" class="btn btn-primary">0</a>
-      <p>select +10 -10 0 and then drop down input field</p>
+      <p>select +10 -10 0 and then drop down input field</p> -->
 
       <label>Points to Apply to this Message:</label>
-      <input ng-model="modifier" type="radio" name="msgScore" value="10">+ 10 Points
-      <input ng-model="modifier" type="radio" name="msgScore" value="-10">- 10 Points
-      <input ng-model="modifier" type="radio" name="msgScore" value="0" checked="checked" >Neutral
+      <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="10">+ 10 Points
+      <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="-10">- 10 Points
+      <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="0">Neutral
 
     </div>
 
@@ -136,7 +133,7 @@
 <p>View then shows 4-6 pre written messages with a +10 -10 or 0 - When submittd it add the message to the license Plate# and adjust overall score associated to the # -show date/time posted NOT by which user</p>
 
 
-<a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
+<a href="#/userPage" class="btn btn-primary">Home</a>
 <a href="#/searchDriver" class="btn btn-primary">Search</a>
 <a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
 <a href="#/help" class="btn btn-primary">Help</a>
