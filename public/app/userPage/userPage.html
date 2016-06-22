@@ -8,8 +8,9 @@
   <p>{{userPage.rank}} ranked driver in the world</p>
 
 
-  <div ng-repeat="currentUserMessages">
-  <p>{{userPage.messages}}</p>
+  <div ng-repeat="messages in userPage.messages">
+  <p>{{messages.message}}</p>
+  </div>
 
   <p>Comments about your driving below... (Pull in messages)</p>
 

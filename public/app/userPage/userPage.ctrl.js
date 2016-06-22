@@ -18,9 +18,9 @@ angular.module('driving')
         firebase.database().ref('messages').orderByChild('plate').equalTo(userPage.plate).on('value', (snapshot) => {
           console.log("this is user plate snapshot", snapshot.val() );
           var currentUserMessages = snapshot.val();
+          console.log("user oage meassage", currentUserMessages);
 
-          userPage.messages = currentUserMessages[key].plate
-
+          userPage.messages = currentUserMessages
           // for(var key in currentUserPlate) {
           //   console.log("Here are your messages", currentUserPlate[key].plate);
           //   userPage.plate = currentUserPlate[key].plate;
