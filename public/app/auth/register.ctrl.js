@@ -10,8 +10,8 @@ angular.module('driving')
       //new code starts on line 11
       .then(() => {
         firebase.database().ref('license').orderByChild('plate').equalTo(register.plate).once('value', (snapshot) => {
-          var foundPlate = snapshot.val()//need.val()?
-          if (foundPlate) { //could call method in AuthFactory - right?
+          var foundPlate = snapshot.val()
+          if (foundPlate) {
             for (var key in foundPlate) {
               AuthFactory.updateLicenseInfo
               (key, register.userName, register.city, register.state, register.zip)

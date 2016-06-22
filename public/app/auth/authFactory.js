@@ -48,11 +48,6 @@ angular.module('driving')
         $http.patch(`https://hows-my-driving-65bc4.firebaseio.com/license/${key}.json`, updateLicenseObj)
       }
 
-      //this allows to tie current user to rate and reg ctrl
-      //which will create username, state, zip, city and then
-      //in ctrl creates and calls rate or reg factory
-      //rate or reg factory will do an $http Post
-      //see new pin ctrl and factory
       // getUser () {
       //   // return currentUser
       //   return firebase.auth().currentUser
