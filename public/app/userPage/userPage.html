@@ -3,8 +3,13 @@
  <p> pull/show plate# from reguser and then score and rank (pulled from firebase) and then messages tied to that plate # </p>
 
   <p>{{userPage.userName}}</p>
+  <p>{{userPage.plate}}</p>
   <p>{{userPage.score}}</p>
   <p>{{userPage.rank}} ranked driver in the world</p>
+
+
+  <div ng-repeat="currentUserMessages">
+  <p>{{userPage.messages}}</p>
 
   <p>Comments about your driving below... (Pull in messages)</p>
 

@@ -19,7 +19,7 @@ angular.module('driving')
           } else {
             //ELSE - do a full registration and set score at 5000
             AuthFactory.sendLicenseInfo
-            (register.plate, register.userName, register.city, register.state, register.zip, 0)
+            (register.plate, register.userName, register.city, register.state, register.zip, 0, AuthFactory.getUser())
             .then(() => $location.path('/userPage'))
             .catch(() => alert('It appears you may already be registered!'))
           }

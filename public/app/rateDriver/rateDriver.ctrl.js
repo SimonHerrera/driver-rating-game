@@ -19,8 +19,8 @@ angular.module('driving')
                 })
               }
             } else {
-              //need to send this info with userName, city, state, zip all empty
-              AuthFactory.sendLicenseInfo(rateDriver.plate, "", "", "", "", rateDriver.modifier)
+              //need to send this info with userName, city, state, zip, uid all empty
+              AuthFactory.sendLicenseInfo(rateDriver.plate, "", "", "", "", rateDriver.modifier, "")
             }
           // console.log(snapshot.val() );
           // console.log(rateDriver.plate );
