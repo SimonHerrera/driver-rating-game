@@ -1,6 +1,13 @@
 * {
+  box-sizing: border-box;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 2.5em;
 }
 
 h1 {
@@ -21,4 +28,16 @@ datalist {
 
 .datalist-style {
   font-size: 1.3em
+}
+
+.message-nest {
+  background-color: lightgray;
+  border-radius: 25px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.btn-primary, .btn-default {
+  border-radius: 15px;
+  font-size: 1.1em;
 }

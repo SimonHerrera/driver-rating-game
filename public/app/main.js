@@ -1,4 +1,5 @@
 angular.module('driving', ['ngRoute']);
+// angular.module('driving', ['ui.bootstrap', 'ngRoute']);
 
 //bottom of page
 

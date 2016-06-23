@@ -1,18 +1,16 @@
-  <h1>Welcome (USER)</h1>
-
- <p> pull/show plate# from reguser and then score and rank (pulled from firebase) and then messages tied to that plate # </p>
-
-  <p>{{userPage.userName}}</p>
-  <p>{{userPage.plate}}</p>
-  <p>{{userPage.score}}</p>
-  <p>{{userPage.rank}} ranked driver in the world</p>
+  <h1>Welcome {{userPage.userName}}</h1>
 
 
-  <div ng-repeat="messages in userPage.messages">
-  <p>{{messages.message}}</p>
+  <!-- <p>{{userPage.userName}}</p> -->
+  <h3>User Plate Number is:{{userPage.plate}}</h3>
+  <h3>Your Current Score is:{{userPage.score}}</h3>
+  <!-- <p>{{userPage.rank}} ranked driver in the world</p> -->
+
+
+  <h3>What your fellow drivers have to say about you:</h3>
+  <div class="message-nest" ng-repeat="messages in userPage.messages">
+  <h4>{{messages.message}}</h4>
   </div>
-
-  <p>Comments about your driving below... (Pull in messages)</p>
 
 
 <a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
