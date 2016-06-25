@@ -5,7 +5,7 @@ angular.module('driving')
 
 
     var myUserId = AuthFactory.getUser();
-    // console.log("my user id", myUserId);
+    console.log("my user id", myUserId);
     firebase.database().ref('license').orderByChild('uid').equalTo(myUserId).on('value', (snapshot) => {
       console.log("Satuday snapshot val from user page!!!", snapshot.val() );
       var currentUser = snapshot.val()
