@@ -25,5 +25,17 @@ angular.module('driving')
           }
         })
       })
+    },
+
+    register.deleteAccount = function(currentUser) {
+      console.log("Delete account and currentUser", currentUser );
+      // firebase.database().ref('license').orderByChild('plate').equalTo(rateDriver.plate).once('value', (snapshot) => {
+      // var currentUser = snapshot.val()
+      //already have in rate driver - line below oppo
+      //AuthFactory.sendLicenseInfo(rateDriver.plate, "", "", "", "", rateDriver.modifier, "")
+
+
+      //delete user in firebase
+      AuthFactory.deleteUser()
     }
   });

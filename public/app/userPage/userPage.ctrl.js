@@ -1,40 +1,30 @@
 angular.module('driving')
   .controller('UserPageCtrl', function(AuthFactory, $timeout) {
-    console.log("User Page Controller is Working" );
     const userPage = this;
 
 
+
     var myUserId = AuthFactory.getUser();
-    console.log("my user id", myUserId);
+    // console.log("my user id", myUserId);
     firebase.database().ref('license').orderByChild('uid').equalTo(myUserId).on('value', (snapshot) => {
-      console.log("snapshot", snapshot.val() );
+      console.log("Satuday snapshot val from user page!!!", snapshot.val() );
       var currentUser = snapshot.val()
+      //pass current
+
       for(var key in currentUser) {
-        console.log("Show the currentUser", currentUser[key].userName);
+        console.log("THIS IS CURRENT USER", currentUser );
+        // console.log("Show the currentUser", currentUser[key].userName);
         userPage.userName = currentUser[key].userName;
         userPage.plate = currentUser[key].plate;
         userPage.score = currentUser[key].score;
 
         firebase.database().ref('messages').orderByChild('plate').equalTo(userPage.plate).on('value', (snapshot) => {
-          console.log("this is user plate snapshot", snapshot.val() );
+          // console.log("this is user plate snapshot", snapshot.val() );
           var currentUserMessages = snapshot.val();
-          console.log("user oage meassage", currentUserMessages);
-
+          // console.log("user message", currentUserMessages);
           userPage.messages = currentUserMessages
-          // for(var key in currentUserPlate) {
-          //   console.log("Here are your messages", currentUserPlate[key].plate);
-          //   userPage.plate = currentUserPlate[key].plate;
-          // }
             $timeout()
         });
       }
     });
-
-    // var myUserPlate = AuthFactory.getUser() - currentuser;
-    // console.log("user plate", myUserPlate );
-
-    //Lookinging License at plate, will always = itself - Do I need to look in messages at license.plate
-    //and IF messages.plate = license.plate THEN display messages.message
-
-    //buttons will be in a fixed footer
   });

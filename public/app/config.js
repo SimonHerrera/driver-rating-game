@@ -20,8 +20,8 @@ angular.module('driving')
     })
     .when("/deleteAccount", {
       templateUrl: "app/auth/deleteAccount.html",
-      controller: "LoginCtrl",
-      controllerAs: "auth"
+      controller: "RegisterCtrl", //changed 6-24 from loginCtrl and auth
+      controllerAs: "register"
     })
 
     //user page

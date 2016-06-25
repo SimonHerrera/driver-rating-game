@@ -6,10 +6,9 @@ angular.module('driving')
       if (user) {
         currentUser = user.uid
         console.log("show user",user.uid);
-        $location.path('/userPage')
+        $location.path('/userPage');
       } else {
-        currentUser = null
-        console.log("logged out")
+        console.log("logged out");
         $location.path('/');
       }
     });
@@ -56,12 +55,21 @@ angular.module('driving')
 
       getUser () {
         console.log("hey, this is the currentUser", currentUser );
-        return currentUser
-      }
+        return currentUser;
+      },
 
       // getUserAuth: function() {
       //   return $q.when(firebase.auth().currentUser);
       // }
+      deleteUser() {
+          var user = firebase.auth().currentUser;
+          user.delete()
+            $location.path('/')
+          // .then(function()
+        //   .then (function() {
+        //   }, function(error){
+        // })
+      }
 
     }
   })

@@ -9,16 +9,4 @@ angular.module('driving')
         .catch(() => alert('Login Failed'))
     }
 
-    // auth.register = function () {
-    //   AuthFactory.register(auth.email, auth.password)
-    //     .then(() => $location.path('/userPage'))
-    //     .catch(() => alert('It appears you may already be registered!'))
-    // }
-
-
-
-    // auth.deleteAccount = function () {
-
-    // }
-
   })
