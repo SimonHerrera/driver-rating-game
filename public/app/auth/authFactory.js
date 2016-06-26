@@ -1,11 +1,11 @@
 angular.module('driving')
   .factory('AuthFactory', function($timeout, $location, $http) {
-    let currentUser = null
+    let currentUid = null
 
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-        currentUser = user.uid
-        console.log("show user",user.uid);
+        currentUid = user.uid
+        console.log("show currentUid",user.uid);
         $location.path('/userPage');
       } else {
         console.log("logged out");
@@ -54,23 +54,18 @@ angular.module('driving')
       },
 
       getUser () {
-        console.log("hey, this is the currentUser", currentUser );
-        return currentUser;
+        console.log("hey, this is the currentUid", currentUid );
+        return currentUid;
       },
 
       // getUserAuth: function() {
       //   return $q.when(firebase.auth().currentUser);
       // }
-      deleteUser() {
-          var user = firebase.auth().currentUser;
-          user.delete()
-            $location.path('/')
-          // .then(function()
-        //   .then (function() {
-        //   }, function(error){
-        // })
+      deleteFirebaseUser() {
+        var user = firebase.auth().currentUser;
+        user.delete()
+          $location.path('/')
       }
-
     }
   })
 
