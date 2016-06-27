@@ -21,7 +21,14 @@ angular.module('driving')
     .when("/deleteAccount", {
       templateUrl: "app/auth/deleteAccount.html",
       controller: "RegisterCtrl", //changed 6-24 from loginCtrl and auth
-      controllerAs: "register"
+      controllerAs: "register",
+      resolve: {
+        function ($location) {
+          if (!firebase.auth().currentUser) {
+           $location.path('/')
+          }
+        }
+      }
     })
 
     //user page
@@ -29,31 +36,65 @@ angular.module('driving')
       templateUrl: "app/userPage/userPage.html",
       controller: "UserPageCtrl",
       controllerAs: "userPage",
-      private: true
+      resolve: {
+        function ($location) {
+          if (!firebase.auth().currentUser) {
+           $location.path('/')
+          }
+        }
+      }
     })
 
     //user options
     .when("/rateDriver", {
       templateUrl: "app/rateDriver/rateDriver.html",
       controller: "RateDriverCtrl",
-      controllerAs: "rateDriver"
+      controllerAs: "rateDriver",
+      resolve: {
+        function ($location) {
+          if (!firebase.auth().currentUser) {
+           $location.path('/')
+          }
+        }
+      }
     })
     .when("/searchDriver", {
       templateUrl: "app/searchDriver/searchDriver.html",
       controller: "SearchDriverCtrl",
-      controllerAs: "searchDriver"
+      controllerAs: "searchDriver",
+      resolve: {
+        function ($location) {
+          if (!firebase.auth().currentUser) {
+           $location.path('/')
+          }
+        }
+      }
     })
     .when("/viewLeaders", {
       templateUrl: "app/viewLeaders/viewLeaders.html",
       controller: "ViewLeadersCtrl",
-      controllerAs: "viewLeaders"
+      controllerAs: "viewLeaders",
+      resolve: {
+        function ($location) {
+          if (!firebase.auth().currentUser) {
+           $location.path('/')
+          }
+        }
+      }
     })
 
     //option from all pages except auth
     .when("/help", {
       templateUrl: "app/help/help.html",
       controller: "HelpCtrl",
-      controllerAs: "help"
+      controllerAs: "help",
+      resolve: {
+        function ($location) {
+          if (!firebase.auth().currentUser) {
+           $location.path('/')
+          }
+        }
+      }
     })
 
   });
