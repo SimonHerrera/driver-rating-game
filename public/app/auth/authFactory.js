@@ -59,6 +59,16 @@ angular.module('driving')
         return currentUser;
       },
 
+      // getCurrentUserObj() {
+      //   var myUserId = AuthFactory.getUser();
+      //   console.log("my currentUid OR myUserId", myUserId);
+      //   firebase.database().ref('license').orderByChild('uid').equalTo(myUserId).on('value', (snapshot) => {
+      //     var currentUserObj = snapshot.val()
+      //     console.log("TRY THIS NEW FUNCTION!!!", snapshot.val() );
+      //     return currentUserObj;
+      //   });
+      // },
+
       // getUserAuth: function() {
       //   return $q.when(firebase.auth().currentUser);
       // }
