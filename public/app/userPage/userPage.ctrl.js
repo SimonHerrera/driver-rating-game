@@ -3,6 +3,7 @@ angular.module('driving')
     const userPage = this;
 
 
+
     var myUserId = AuthFactory.getUser();
     console.log("my currentUid OR myUserId", myUserId);
     firebase.database().ref('license').orderByChild('uid').equalTo(myUserId).on('value', (snapshot) => {

@@ -1,6 +1,6 @@
 angular.module('driving')
   .controller('ViewLeadersCtrl', function(AuthFactory) {
+      const viewLeaders = this;
 
-    console.log("View Leaders Controller is Working" );
 
   });

@@ -1,8 +1,8 @@
 angular.module('driving')
   .factory('AuthFactory', function($timeout, $location, $http) {
-    let currentUid = null
+    let currentUser = null
 
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function(user) { console.log("state change running");
       if (user) {
         currentUser = user.uid
         console.log("show Firebase currentUser",user.uid);
@@ -54,7 +54,8 @@ angular.module('driving')
       },
 
       getUser () {
-        console.log("hey, this is the currentUser!", currentUser );
+        // console.log("hey, this is the currentUser!", currentUser );
+        //this is getting the current firebaseUser
         return currentUser;
       },
 

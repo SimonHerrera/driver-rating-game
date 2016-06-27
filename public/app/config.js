@@ -28,7 +28,8 @@ angular.module('driving')
     .when("/userPage", {
       templateUrl: "app/userPage/userPage.html",
       controller: "UserPageCtrl",
-      controllerAs: "userPage"
+      controllerAs: "userPage",
+      private: true
     })
 
     //user options
