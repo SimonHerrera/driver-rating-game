@@ -5,9 +5,9 @@ angular.module('driving')
 
     rateDriver.sendRateInfo = function () {
 //*check to see if current user is typing their plate*
-        //no matter what - send plate and message to messages
+        //no matter what - send plate and message to messages using RateDriverFactory
         RateDriverFactory.sendRateInfo(rateDriver.plate, rateDriver.message)
-        //then check IF plate key exists add modifier or run ELSE
+        //then check IF plate key exists and add modifier or run ELSE
         .then(() => {
           firebase.database().ref('license').orderByChild('plate').equalTo(rateDriver.plate).once('value', (snapshot) => {
             var foundUser = snapshot.val()

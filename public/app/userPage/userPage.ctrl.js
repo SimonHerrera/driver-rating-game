@@ -3,11 +3,10 @@ angular.module('driving')
     const userPage = this;
 
 
-
     var myUserId = AuthFactory.getUser();
     console.log("my currentUid OR myUserId", myUserId);
     firebase.database().ref('license').orderByChild('uid').equalTo(myUserId).on('value', (snapshot) => {
-      console.log("Satuday snapshot val from user page!!!", snapshot.val() );
+      // console.log("Satuday snapshot val from user page!!!", snapshot.val() );
       var currentUserObj = snapshot.val()
       //pass current
 
