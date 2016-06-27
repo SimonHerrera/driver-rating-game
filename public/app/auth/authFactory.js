@@ -4,8 +4,8 @@ angular.module('driving')
 
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
-        currentUid = user.uid
-        console.log("show currentUid",user.uid);
+        currentUser = user.uid
+        console.log("show Firebase currentUser",user.uid);
         $location.path('/userPage');
       } else {
         console.log("logged out");
@@ -42,25 +42,37 @@ angular.module('driving')
 
       },
 
-      updateLicenseInfo(key, userName,city, state, zip) {
+      updateLicenseInfo(key, userName, city, state, zip) { //somehow this was working, would just populate uid before
         var updateLicenseObj = {
           userName: userName,
           city: city,
           state: state,
           zip: zip,
-          uid: currentUser
+          uid: currentUser //works but missing uid, I had made changes to UID was currentUser?
         }
         $http.patch(`https://hows-my-driving-65bc4.firebaseio.com/license/${key}.json`, updateLicenseObj)
       },
 
       getUser () {
-        console.log("hey, this is the currentUid", currentUid );
-        return currentUid;
+        console.log("hey, this is the currentUser!", currentUser );
+        return currentUser;
       },
 
       // getUserAuth: function() {
       //   return $q.when(firebase.auth().currentUser);
       // }
+      deleteUserLicenseInfo(delkey, userName, city, state, zip, uid) {
+        var deleteUserObj = {
+          userName: userName,
+          city: city,
+          state: state,
+          zip: zip,
+          uid: uid
+        }
+        return $http.patch(`https://hows-my-driving-65bc4.firebaseio.com/license/${delkey}.json`, deleteUserObj)
+        // deleteFirebaseUser()
+      },
+
       deleteFirebaseUser() {
         var user = firebase.auth().currentUser;
         user.delete()

@@ -1,7 +1,6 @@
 angular.module('driving')
   .controller('RegisterCtrl', function ($location, AuthFactory) {
     const register = this;
-    console.log("Register Controller is Working" );
 
     register.sendRegInfo = function () {
       //no matter what - register this email and password
@@ -12,6 +11,8 @@ angular.module('driving')
         firebase.database().ref('license').orderByChild('plate').equalTo(register.plate).once('value', (snapshot) => {
           var foundPlate = snapshot.val()
           if (foundPlate) {
+            console.log("IF FOUND PLATE SHOW OBJ", foundPlate );//then says currentUid not defined
+            // console.log("SHOW ME CURRENT UID", currentUid );
             for (var key in foundPlate) {
               AuthFactory.updateLicenseInfo
               (key, register.userName, register.city, register.state, register.zip)
@@ -28,14 +29,28 @@ angular.module('driving')
     },
 
     register.deleteAccount = function() {
+      var myUserId = AuthFactory.getUser();
+      firebase.database().ref('license').orderByChild('uid').equalTo(myUserId).once('value', (snapshot) => {
+      var currentUserObj = snapshot.val()
+        console.log("SUNDAY currentUserObj", currentUserObj );
+
+        for (var delkey in currentUserObj) {
+          AuthFactory.deleteUserLicenseInfo
+          (delkey, "", "", "", "", "")
+          .then(() => $location.path('/'))
+          .catch(() => alert('Uhhm, not working'))
+        }
+    })
+
+      //AuthFactory.sendLicenseInfo(rateDriver.plate, "", "", "", "", rateDriver.modifier, "")
+
       // console.log("Delete account and currentUser", currentUser );
       // firebase.database().ref('license').orderByChild('plate').equalTo(rateDriver.plate).once('value', (snapshot) => {
       // var currentUser = snapshot.val()
       //already have in rate driver - line below oppo
-      //AuthFactory.sendLicenseInfo(rateDriver.plate, "", "", "", "", rateDriver.modifier, "")
 
 
-      //delete user in firebase
+      //***delete user in firebase
       AuthFactory.deleteFirebaseUser()
     }
   });
