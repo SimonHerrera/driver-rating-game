@@ -3,6 +3,25 @@ angular.module('driving')
     const rateDriver = this;
     rateDriver.modifier = 0;
 
+    console.log("Search Driver Controller is Working" );
+    var myUserId = AuthFactory.getUser();
+    console.log("my currentUid OR myUserId", myUserId);
+    firebase.database().ref('license').orderByChild('uid').equalTo(myUserId).on('value', (snapshot) => {
+      // console.log("Satuday snapshot val from user page!!!", snapshot.val() );
+      var currentUserObj = snapshot.val()
+      //pass current
+
+      for(var key in currentUserObj) {
+        console.log("THIS IS CURRENT APP Object", currentUserObj );
+        console.log("Show the currentUser", currentUserObj[key].userName);
+        rateDriver.userName = currentUserObj[key].userName;
+        rateDriver.plate = currentUserObj[key].plate;
+        rateDriver.score = currentUserObj[key].score;
+          $timeout()
+      }
+    });
+
+
     rateDriver.sendRateInfo = function () {
 //*check to see if current user is typing their plate*
         //no matter what - send plate and message to messages using RateDriverFactory

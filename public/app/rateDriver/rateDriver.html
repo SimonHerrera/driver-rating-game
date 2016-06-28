@@ -1,5 +1,12 @@
 <h1>Rate Driver</h1>
 
+  <h1>Welcome {{rateDriver.userName}}</h1>
+
+
+  <h3>User Plate Number is:{{rateDriver.plate}}</h3>
+  <h3>Your Current Score is:{{rateDriver.score}}</h3>
+  <!-- <p>{{searchDriver.rank}} ranked driver in the world</p> -->
+
 <form ng-submit="rateDriver.sendRateInfo()">
   <div class="form-group">
   <label for="plate-input">Enter License Plate Info:</label>
