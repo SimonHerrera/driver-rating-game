@@ -1,17 +1,33 @@
 angular.module('driving')
   .factory('AuthFactory', function($timeout, $location, $http) {
     let currentUser = null
+//* let currentUserObj = null
+
 
     firebase.auth().onAuthStateChanged(function(user) { console.log("state change running");
       if (user) {
-        currentUser = user.uid
+        currentUser = user.uid;
+//* currentUserObj = getCurrentUserObj();
         console.log("show Firebase currentUser",user.uid);
+//* console.log("first currentUserObj", currentUserObj );
         $location.path('/userPage');
       } else {
         console.log("logged out");
         $location.path('/');
       }
     });
+
+//*
+    // function getCurrentUserObj() {
+    // // var myUserId = AuthFactory.getUser();
+    //   console.log("my currentUid OR myUserId", currentUser);
+    //   firebase.database().ref('license').orderByChild('uid').equalTo(myUserId).on('value', (snapshot) => {
+    //     // console.log("Satuday snapshot val from user page!!!", snapshot.val() );
+    //     var currentUserObj = snapshot.val()
+    //     console.log("AFTER GETCURRENTUSEROBJ RUNS", currentUserObj );
+    //     return currentUserObj
+    //   });
+    // }
 
 
     return {
