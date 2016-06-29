@@ -28,8 +28,17 @@ angular.module('driving')
           //
         //THEN if no, then show a message saying - no plate matches and - display somehow and then clear seach
         firebase.database().ref('license').orderByChild('plate').equalTo(searchDriver.plate1).on('value', (snapshot) => {
-            var searchedPlate = snapshot.val()
-            console.log("SEARCHED DRIVER PLATE", searchedPlate );
+            var searchedPlateObj = snapshot.val()
+            console.log("SEARCHED DRIVER PLATE", searchedPlateObj );
+
+          for(var key in searchedPlateObj) {
+          console.log("THIS IS CURRENT APP Object", searchedPlateObj );
+          console.log("Show UserName of Searched Plate", searchedPlateObj[key].userName);
+          searchDriver.searchedUserName = searchedPlateObj[key].userName;
+          searchDriver.searchedPlate = searchedPlateObj[key].plate;
+          searchDriver.searchedScore = searchedPlateObj[key].score;
+              $timeout()
+          }
 
         })
     }
