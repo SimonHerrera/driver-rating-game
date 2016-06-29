@@ -41,3 +41,9 @@ datalist {
   border-radius: 15px;
   font-size: 1.1em;
 }
+
+.time-diplsay {
+  text-align: right;
+  display: inline-block;
+}
+

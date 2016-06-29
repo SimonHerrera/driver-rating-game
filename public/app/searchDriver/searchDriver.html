@@ -6,6 +6,11 @@
   <h3>User Plate Number is:{{searchDriver.plate}}</h3>
   <h3>Your Current Score is:{{searchDriver.score}}</h3>
   <!-- <p>{{searchDriver.rank}} ranked driver in the world</p> -->
+<a href="#/userPage" class="btn btn-primary">Home</a>
+<a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
+<a href="#/searchDriver" class="btn btn-primary">Search A Driver</a>
+<a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
+<a href="#/help" class="btn btn-primary">Help</a>
 
 <!-- <p>Search a License Plate(Input # - submit shows that user, messages, score, overall rank</p>
 
@@ -20,15 +25,12 @@
 <form ng-submit="searchDriver.searchDriverInfo()">
   <div>
     <label for="user-name">Enter the Plate Number you are looking for:</label>
-    <input ng-model="FILLINLATER" type="text" id="plate-search" placeholder="Plate Search"/>
+    <input ng-model="searchDriver.plate1" type="text" id="plate-search" placeholder="Plate Search" required class="datalist-style" />
   </div>
 
-  <input class="btn btn-primary" type="submit" value="Run Search" required/>
+  <input class="btn btn-primary" type="submit" value="RunSearch" required/>
+
 </form>
 
 <p>Maybe a button, (Rate this driver) takes you to RateDriver page with lic# populated</p>
 
-<a href="#/userPage" class="btn btn-primary">Home</a>
-<a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
-<a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
-<a href="#/help" class="btn btn-primary">Help</a>

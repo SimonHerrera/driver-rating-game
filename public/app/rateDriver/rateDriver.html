@@ -6,13 +6,20 @@
   <h3>User Plate Number is:{{rateDriver.plate}}</h3>
   <h3>Your Current Score is:{{rateDriver.score}}</h3>
   <!-- <p>{{searchDriver.rank}} ranked driver in the world</p> -->
+<a href="#/userPage" class="btn btn-primary">Home</a>
+<a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
+<a href="#/searchDriver" class="btn btn-primary">Search A Driver</a>
+<a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
+<a href="#/help" class="btn btn-primary">Help</a>
+
 
 <form ng-submit="rateDriver.sendRateInfo()">
   <div class="form-group">
-  <label for="plate-input">Enter License Plate Info:</label>
+  <label for="plate-input">Enter License Plate Info - example(TN123-456):</label>
     <div>
       <!-- name in ng-model ="" passed to register controller -->
-      <input ng-model="rateDriver.plate" type="text" id="plate-input" placeholder="Plate#" list="states" required class="datalist-style">
+      <input ng-model="rateDriver.plate1" type="text" id="plate-input" placeholder="Plate#" required class="datalist-style"/>
+      <!-- <input ng-model="rateDriver.plate" type="text" id="plate-input" placeholder="Plate#" list="states" required class="datalist-style">
       <datalist  id="states">
         <option value="">N/A</option>
         <option value="AK">AK</option>
@@ -67,9 +74,9 @@
         <option value="WI">WI</option>
         <option value="WV">WV</option>
         <option value="WY">WY</option>
-      </datalist>
+      </datalist> -->
     </div>
-    <div>
+  <div>
 <!--       <p>Select Points to attach to message</p>
       <a href="#/rateDriver" class="btn btn-primary">+10</a>
       <a href="#/rateDriver" class="btn btn-primary">-10</a>
@@ -139,8 +146,3 @@
 
 <p>View then shows 4-6 pre written messages with a +10 -10 or 0 - When submittd it add the message to the license Plate# and adjust overall score associated to the # -show date/time posted NOT by which user</p>
 
-
-<a href="#/userPage" class="btn btn-primary">Home</a>
-<a href="#/searchDriver" class="btn btn-primary">Search</a>
-<a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
-<a href="#/help" class="btn btn-primary">Help</a>

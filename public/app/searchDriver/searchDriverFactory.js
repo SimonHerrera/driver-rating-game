@@ -1,8 +1,8 @@
 angular.module('driving')
-  .factory('SearchDriverFactory', function() {
-
+  .factory('SearchDriverFactory', function($timeout, $location, $http) {
 
 
 
 
   });
+

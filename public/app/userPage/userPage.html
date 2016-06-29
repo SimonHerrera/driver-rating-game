@@ -7,15 +7,18 @@
 <h3>User Plate Number is:{{userPage.plate}}</h3>
 <h3>Your Current Score is:{{userPage.score}}</h3>
 <!-- <p>{{userPage.rank}} ranked driver in the world</p> -->
+<a href="#/userPage" class="btn btn-primary">Home</a>
+<a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
+<a href="#/searchDriver" class="btn btn-primary">Search A Driver</a>
+<a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
+<a href="#/help" class="btn btn-primary">Help</a>
 
 
 <h3>What your fellow drivers have to say about you:</h3>
-<div class="message-nest" ng-repeat="messages in userPage.messages">
-<h4>{{messages.message}}</h4>
+<div class="message-nest" ng-repeat="messages in userPage.messages | orderBy: 'time':true">
+<!-- <div class="message-nest" ng-repeat="messages in userPage.messages"> -->
+  <h4>{{messages.message}}</h4>
+  <div>
+    <h5 class="time-display">{{messages.time}}</h5>
+  </div>
 </div>
-
-
-<a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
-<a href="#/searchDriver" class="btn btn-primary">Search</a>
-<a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
-<a href="#/help" class="btn btn-primary">Help</a>

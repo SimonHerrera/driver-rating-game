@@ -19,4 +19,18 @@ angular.module('driving')
           $timeout()
       }
     });
+
+    searchDriver.searchDriverInfo = function() {
+      //could it be an input box that populates as you type, doubtful w firebase
+      //check input and see IF any plates match the input
+        //IF yes then Show that userName, and Score and
+        //list messages just like on the user page but for that plate
+          //
+        //THEN if no, then show a message saying - no plate matches and - display somehow and then clear seach
+        firebase.database().ref('license').orderByChild('plate').equalTo(searchDriver.plate1).on('value', (snapshot) => {
+            var searchedPlate = snapshot.val()
+            console.log("SEARCHED DRIVER PLATE", searchedPlate );
+
+        })
+    }
   });

@@ -4,10 +4,12 @@ angular.module('driving')
     return {
 
       // sendRateInfo(ratedPlate, autoMessage, userMessage) {
-      sendRateInfo(ratedPlate, ratedMessage) {
+      sendRateInfo(ratedPlate, ratedMessage, messageTime) {
       var messageObj = {
         plate: ratedPlate,
-        message: ratedMessage
+        message: ratedMessage,
+        time: messageTime
+
         // userMessage: userMessage
         } //will need to create empty license object with empty city, state, zip, userName
 

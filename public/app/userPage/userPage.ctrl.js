@@ -2,8 +2,6 @@ angular.module('driving')
   .controller('UserPageCtrl', function(AuthFactory, $timeout) {
     const userPage = this;
 
-
-
     var myUserId = AuthFactory.getUser();
     console.log("my currentUid OR myUserId", myUserId);
     firebase.database().ref('license').orderByChild('uid').equalTo(myUserId).on('value', (snapshot) => {
@@ -18,12 +16,17 @@ angular.module('driving')
         userPage.plate = currentUserObj[key].plate;
         userPage.score = currentUserObj[key].score;
 
-        firebase.database().ref('messages').orderByChild('plate').equalTo(userPage.plate).on('value', (snapshot) => {
-          // console.log("this is user plate snapshot", snapshot.val() );
+        firebase.database().ref('messages').orderByChild('plate').equalTo(userPage.plate).limitToLast(25).on('value', (snapshot) => {
           var currentUserMessages = snapshot.val();
-          // console.log("user message", currentUserMessages);
-          userPage.messages = currentUserMessages
-            $timeout()
+          console.log("user message", currentUserMessages);
+          // userPage.messages = currentUserMessages (was old code before converting to array)
+            var array = $.map(currentUserMessages, function(value, index) {
+              return [value];
+          });
+          console.log("CHECK THIS OUT", array);
+          userPage.messages = array
+
+          $timeout()
         });
       }
     });
