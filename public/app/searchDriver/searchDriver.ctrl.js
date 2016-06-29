@@ -32,12 +32,25 @@ angular.module('driving')
             console.log("SEARCHED DRIVER PLATE", searchedPlateObj );
 
           for(var key in searchedPlateObj) {
-          console.log("THIS IS CURRENT APP Object", searchedPlateObj );
-          console.log("Show UserName of Searched Plate", searchedPlateObj[key].userName);
-          searchDriver.searchedUserName = searchedPlateObj[key].userName;
-          searchDriver.searchedPlate = searchedPlateObj[key].plate;
-          searchDriver.searchedScore = searchedPlateObj[key].score;
-              $timeout()
+            console.log("THIS IS CURRENT APP Object", searchedPlateObj );
+            console.log("Show UserName of Searched Plate", searchedPlateObj[key].userName);
+            searchDriver.searchedUserName = searchedPlateObj[key].userName;
+            searchDriver.searchedPlate = searchedPlateObj[key].plate;
+            searchDriver.searchedScore = searchedPlateObj[key].score;
+
+//new
+            firebase.database().ref('messages').orderByChild('plate').equalTo(searchDriver.searchedPlate).limitToLast(25).on('value', (snapshot) => {
+              var searchedUserMessages = snapshot.val();
+              console.log("user message", searchedUserMessages);
+              // userPage.messages = searchedUserMessages (was old code before converting to array)
+                var array = $.map(searchedUserMessages, function(value, index) {
+                  return [value];
+              });
+              console.log("CHECK THIS OUT", array);
+              searchDriver.messages = array
+
+              $timeout()//move down 2 lines
+            });
           }
 
         })

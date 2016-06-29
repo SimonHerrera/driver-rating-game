@@ -35,5 +35,17 @@
   <h3>{{searchDriver.searchedUserName}}'s current Score is: {{searchDriver.searchedScore}}</h3>
 </div>
 
+
+<!--NEW-->
+<h3>Here are the messages about this driver: </h3>
+<div class="message-nest" ng-repeat="messages in searchDriver.messages | orderBy: 'time':true">
+<!-- <div class="message-nest" ng-repeat="messages in userPage.messages"> -->
+  <h4>{{messages.message}}</h4>
+  <div>
+    <h5 class="time-display">{{messages.time}}</h5>
+  </div>
+</div>
+
+
 <p>Maybe a button, (Rate this driver) takes you to RateDriver page with lic# populated</p>
 
