@@ -1,16 +1,14 @@
 <h1>Rate Driver</h1>
 
-  <h1>Welcome {{rateDriver.userName}}</h1>
-
-
-  <h3>User Plate Number is:{{rateDriver.plate}}</h3>
-  <h3>Your Current Score is:{{rateDriver.score}}</h3>
-  <!-- <p>{{searchDriver.rank}} ranked driver in the world</p> -->
 <a href="#/userPage" class="btn btn-primary">Home</a>
 <a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
 <a href="#/searchDriver" class="btn btn-primary">Search A Driver</a>
 <a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
 <a href="#/help" class="btn btn-primary">Help</a>
+  <h1>Welcome {{rateDriver.userName}}</h1>
+  <h3>User Plate Number is:{{rateDriver.plate}}</h3>
+  <h3>Your Current Score is:{{rateDriver.score}}</h3>
+  <!-- <p>{{searchDriver.rank}} ranked driver in the world</p> -->
 
 
 <form ng-submit="rateDriver.sendRateInfo()">
@@ -77,11 +75,7 @@
       </datalist> -->
     </div>
   <div>
-<!--       <p>Select Points to attach to message</p>
-      <a href="#/rateDriver" class="btn btn-primary">+10</a>
-      <a href="#/rateDriver" class="btn btn-primary">-10</a>
-      <a href="#/rateDriver" class="btn btn-primary">0</a>
-      <p>select +10 -10 0 and then drop down input field</p> -->
+
 
       <label>Points to Apply to this Message:</label>
       <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="10">+ 10 Points
@@ -105,34 +99,6 @@
           <option velue="Next time you park this close could you please leave me a can opener!!!">Next time you park this close could you please leave me a can opener!!!</option>
       </select>
     </div>
-
-<!-- Initial Option Below-->
-<!--     <div>
-      <label for="rate-driver">Select a Review or type your own:</label>
-      <select  ng-model="rateDriver.autoMessage" type="text" id="rate-driver">
-          <option disabled selected>  Select a Message  </option>
-          <option></option>
-          <option value="How about you not pull into traffic at such a slow speeds!!!">How about you not pull into traffic at such a slow speeds!!!</option>
-          <option value="Gas pedal is on the right, why don't you try to go the speed limit!!!">Gas pedal is on the right, why don't you try to go the speed limit!!!</option>
-          <option value="Get off your phone and watch the road!!!">Get off your phone and watch the road!!!</option>
-          <option value="Left Lane Loser, get over and let the rest of us pass!!!">Left Lane Loser, get over and let the rest of us pass!!!</option>
-          <option value="Hey Lead Foot, where's the fire!!!">Hey Lead Foot, where's the fire!!!</option>
-          <option velue="Next time you park this close could you plase leave me a can opener!!!">Next time you park this close could you plase leave me a can opener!!!</option>
-      </select>
-    </div>
-    <p>Input field limited to 100 characters</p>
-    <div>
-      <label for="messageInput">Message about this plate:</label>
-      <textarea ng-model="rateDriver.userMessage" type="text" id="messageInput" placeholder="Message about this Plate#" maxlength="100" /></textarea>
-    </div> -->
-
-<!-- OR THIS USE Divs or Buttons with option to have input on last one -->
-<!--     <input class="btn btn-primary" type="submit" value="How about you not pull into traffic at such a slow speeds!!!">
-
-    <button class="btn btn-default nosubmit" value="How about you not pull into traffic at such a slow speeds!!!">
-    </button>
-    <button class="btn btn-default nosubmit" value="Gas pedal is on the right, why don't you try to go the speed limit!!!">
-    </button> -->
 
 
       <input class="btn btn-primary" type="submit" value="RateDriver" required/>
