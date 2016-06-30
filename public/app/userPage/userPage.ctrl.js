@@ -18,13 +18,12 @@ angular.module('driving')
 
         firebase.database().ref('messages').orderByChild('plate').equalTo(userPage.plate).limitToLast(25).on('value', (snapshot) => {
           var currentUserMessages = snapshot.val();
-          console.log("user message", currentUserMessages);
           // userPage.messages = currentUserMessages (was old code before converting to array)
-            var array = $.map(currentUserMessages, function(value, index) {
+            var messageArray = $.map(currentUserMessages, function(value, index) {
               return [value];
-          });
-          console.log("CHECK THIS OUT", array);
-          userPage.messages = array
+            });
+            // console.log("CHECK THIS OUT", array);
+            userPage.messages1 = messageArray
 
           $timeout()
         });

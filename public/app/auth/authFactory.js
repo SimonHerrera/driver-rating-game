@@ -85,9 +85,6 @@ angular.module('driving')
       //   });
       // },
 
-      // getUserAuth: function() {
-      //   return $q.when(firebase.auth().currentUser);
-      // }
       deleteUserLicenseInfo(delkey, userName, city, state, zip, uid) {
         var deleteUserObj = {
           userName: userName,

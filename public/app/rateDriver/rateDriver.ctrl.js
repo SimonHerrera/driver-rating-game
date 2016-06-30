@@ -22,13 +22,13 @@ angular.module('driving')
     });
 
     rateDriver.sendRateInfo = function () {
+      //check to see if current user is typing their plate*
       if (rateDriver.plate === rateDriver.plate1){
         rateDriver.plate1 = "";
         rateDriver.message = "";
         alert("Nice Try, you cannot rate your own driving!");
       } else {
 
-//*check to see if current user is typing their plate*
         //no matter what - send plate and message to messages using RateDriverFactory
         let messageTimeStamp = new Date();
         messageTimeStamp = messageTimeStamp.toDateString()

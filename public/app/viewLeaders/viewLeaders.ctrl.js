@@ -16,7 +16,19 @@ angular.module('driving')
         viewLeaders.userName = currentUserObj[key].userName;
         viewLeaders.plate = currentUserObj[key].plate;
         viewLeaders.score = currentUserObj[key].score;
+
+          firebase.database().ref('license').orderByChild('score').on('value', (snapshot) => {
+              var leaderScoresObj = snapshot.val();
+              // viewLeaders.score = leaderScores
+              console.log("HERE ARE YOUR LEADERS!!!", leaderScoresObj );
+
+              var licenseScoresArray = $.map(leaderScoresObj, function(value, index) {
+                return [value];
+              });
+              // console.log("CHECK THIS OUT", array);
+              viewLeaders.leaderData = licenseScoresArray
           $timeout()
+          });
       }
     });
   });
