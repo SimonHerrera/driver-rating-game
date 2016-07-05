@@ -16,7 +16,7 @@
   <label for="plate-input">Enter License Plate Info - example(TN123-456):</label>
     <div>
       <!-- name in ng-model ="" passed to register controller -->
-      <input ng-model="rateDriver.plate1" type="text" id="plate-input" placeholder="Plate#" required class="datalist-style"/>
+      <input ng-model="rateDriver.plate1" type="text" id="plate-input" placeholder="Plate#" required class="datalist-style" onkeyup="changePlateToUpperCase(this)"/>
       <!-- <input ng-model="rateDriver.plate" type="text" id="plate-input" placeholder="Plate#" list="states" required class="datalist-style">
       <datalist  id="states">
         <option value="">N/A</option>
@@ -74,15 +74,14 @@
         <option value="WY">WY</option>
       </datalist> -->
     </div>
-  <div>
 
-
+    <div>
       <label>Points to Apply to this Message:</label>
       <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="10">+ 10 Points
       <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="-10">- 10 Points
       <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="0">Neutral
-
     </div>
+
 
     <div>
       <label for="rate-driver">Select a Review or type your own:</label>

@@ -48,7 +48,7 @@ angular.module('driving')
               }
             } else { //Create this record with empty values and a plate and score
               //send this with userName, city, state, zip, uid all empty
-              AuthFactory.sendLicenseInfo(rateDriver.plate1, "", "", "", "", rateDriver.modifier, "")
+              AuthFactory.sendLicenseInfo(rateDriver.plate1, "", "City-NA", "State-NA", "Zip-NA", rateDriver.modifier, "")
             }
           })
         })
