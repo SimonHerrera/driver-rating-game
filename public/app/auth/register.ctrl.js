@@ -36,7 +36,7 @@ angular.module('driving')
 
         for (var delkey in currentUserObj) {
           AuthFactory.deleteUserLicenseInfo
-          (delkey, "", "", "", "", "")
+          (delkey, "", "City-NA", "State-NA", "Zip-NA", "")
           .then(() => $location.path('/'))
           .catch(() => alert('Uhhm, not working'))
         }

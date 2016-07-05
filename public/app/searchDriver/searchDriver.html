@@ -23,7 +23,7 @@
 <form ng-submit="searchDriver.searchDriverInfo()"> <!-- do I add another ng-submit here for messages-->
   <div>
     <label for="user-name">Enter the Plate Number you are looking for:</label>
-    <input ng-model="searchDriver.plate1" type="text" id="plate-search" placeholder="Plate Search" required class="datalist-style" />
+    <input ng-model="searchDriver.plate1" type="text" id="plate-search" placeholder="Plate Search" required class="datalist-style" onkeyup="changePlateToUpperCase(this)"/>
   </div>
   <input class="btn btn-primary" type="submit" value="RunSearch" required/>
 </form>

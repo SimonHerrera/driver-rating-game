@@ -15,8 +15,11 @@
 <h3>Here are you driving leaders: </h3>
 <div class="leader-display" ng-repeat="license in viewLeaders.leaderData | orderBy: 'score':false">
 <!-- <div class="message-nest" ng-repeat="messages in userPage.messages"> -->
+  <h4>{{license.plate}}</h4>
   <h4>{{license.score}}</h4>
-  <h4>{{license.userName}}</h4>
+  <h4>{{license.city}}</h4>
+  <h4>{{license.state}}</h4>
+  <h4>{{license.zip}}</h4>
 </div>
 
 

@@ -12,7 +12,7 @@
   <label for="plate-input">Enter Your License Plate Info:</label>
     <div>
       <!-- name in ng-model ="" passed to register controller -->
-      <input ng-model="register.plate" type="text" id="plate-input" placeholder="Plate#" list="states" required class="datalist-style">
+      <input ng-model="register.plate" type="text" id="plate-input" placeholder="Plate#" list="states" required class="datalist-style" onkeyup="changePlateToUpperCase(this)">
       <datalist  id="states">
         <option value="">N/A</option>
         <option value="AK">AK</option>
@@ -72,19 +72,19 @@
 
     <div>
       <label for="user-name">User Name:</label>
-      <input ng-model="register.userName" type="text" id="user-name" placeholder="Your User Name"/>
+      <input ng-model="register.userName" maxlength="12" type="text" id="user-name" placeholder="Your User Name" onkeyup="changeToUpperCase(this)"/>
     </div>
     <div>
       <label for="city-name">City:</label>
-      <input ng-model="register.city" type="text" id="city-name" placeholder="Your City" />
+      <input ng-model="register.city" type="text" id="city-name" placeholder="Your City" onkeyup="changeToUpperCaseCity(this)" />
     </div>
     <div>
       <label for="state-name">State:</label>
-      <input ng-model="register.state" type="text" id="state-name" placeholder="Your State" />
+      <input ng-model="register.state" type="text" id="state-name" placeholder="Your State" onkeyup="changeToUpperCaseState(this)"/>
     </div>
     <div>
       <label for="state-name">Zip:</label>
-      <input ng-model="register.zip" type="text" id="zip-code" placeholder="Your Zip Code" />
+      <input ng-model="register.zip" type="text" id="zip-code" placeholder="Your Zip Code" onkeyup="changeZipCode(this)" />
     </div>
     <div>
       <input type="email" ng-model="register.email" placeholder="email" required/>
@@ -99,27 +99,6 @@
 
 <p>(working)ELSE populate UserName, City, State, Zip and Plate & set Score to 5000</p>
 
-
-
 <p>(working) As with RATE A DRIVER - capture +/- 10 or 0 (modifier)</p>
 <p>(working)IF LICENSE.plate match exists THEN Adjust Score in LICENSES<p>
 <p>(working)But either way DO - Create within MESSAGES add the message and plate
-
-
-
-<!--   <form ng-submit="auth.register()">
-    <input type="email" ng-model="auth.email" placeholder="email" />
-    <input type="password" ng-model="auth.password" placeholder="password" />
-    <input class="btn btn-primary" type="submit" value="Register"/>
-  </form> -->
-
-
-
-<!-- OLD CODE TO DELETE LATER
-<a href="#/userPage" class="btn btn-primary">Register</a> -->
-<!-- <a href="#/help" class="btn btn-primary">Help</a> -->
-
-<!--     <div>
-      <label for="plate-input">First 7 Digits of plate:</label>
-      <input ng-model="register.plate" type="text" id="plate-input" placeholder="Plate#"/>
-    </div> -->
