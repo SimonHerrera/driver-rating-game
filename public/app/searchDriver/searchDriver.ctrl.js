@@ -1,6 +1,7 @@
 angular.module('driving')
   .controller('SearchDriverCtrl', function(AuthFactory, $timeout) {
     const searchDriver = this;
+    searchDriver.someVar = false;
 
     console.log("Search Driver Controller is Working" );
     var myUserId = AuthFactory.getUser();
@@ -30,13 +31,17 @@ angular.module('driving')
         firebase.database().ref('license').orderByChild('plate').equalTo(searchDriver.plate1).on('value', (snapshot) => {
             var searchedPlateObj = snapshot.val()
             console.log("SEARCHED DRIVER PLATE", searchedPlateObj );
-
+        if (searchedPlateObj === null) {
+          alert('THAT DRIVER DOES NOT EXITS')
+        } else {
+            searchDriver.someVar = true;
           for(var key in searchedPlateObj) {
             console.log("THIS IS CURRENT APP Object", searchedPlateObj );
             console.log("Show UserName of Searched Plate", searchedPlateObj[key].userName);
             searchDriver.searchedUserName = searchedPlateObj[key].userName;
             searchDriver.searchedPlate = searchedPlateObj[key].plate;
             searchDriver.searchedScore = searchedPlateObj[key].score;
+        }
 
 //new
             firebase.database().ref('messages').orderByChild('plate').equalTo(searchDriver.searchedPlate).limitToLast(25).on('value', (snapshot) => {

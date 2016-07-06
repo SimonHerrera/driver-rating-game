@@ -1,113 +1,130 @@
-<h1>Rate Driver</h1>
+<div class="userPage-background">
+  <nav class="page-nav">
+    <!-- Links -->
+    <ul class="page-header">
+      <li class="nav-button"><a href="#/userPage">Home</a></li>
+      <li class="nav-button"><a href="#/rateDriver">Rate</a></li>
+      <li class="nav-button"><a href="#/searchDriver">Search</a></li>
+      <li class="nav-button"><a href="#/viewLeaders">Leaders</a></li>
+      <li class="nav-button"><a href="#/help">Help</a></li>
+    </ul>
+  </nav>
 
-<a href="#/userPage" class="btn btn-primary">Home</a>
-<a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
-<a href="#/searchDriver" class="btn btn-primary">Search A Driver</a>
-<a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
-<a href="#/help" class="btn btn-primary">Help</a>
-  <h1>Welcome {{rateDriver.userName}}</h1>
-  <h3>User Plate Number is:{{rateDriver.plate}}</h3>
-  <h3>Your Current Score is:{{rateDriver.score}}</h3>
-  <!-- <p>{{searchDriver.rank}} ranked driver in the world</p> -->
-
-
-<form ng-submit="rateDriver.sendRateInfo()">
-  <div class="form-group">
-  <label for="plate-input">Enter License Plate Info - example(TN123-456):</label>
-    <div>
-      <!-- name in ng-model ="" passed to register controller -->
-      <input ng-model="rateDriver.plate1" type="text" id="plate-input" placeholder="Plate#" required class="datalist-style" onkeyup="changePlateToUpperCase(this)"/>
-      <!-- <input ng-model="rateDriver.plate" type="text" id="plate-input" placeholder="Plate#" list="states" required class="datalist-style">
-      <datalist  id="states">
-        <option value="">N/A</option>
-        <option value="AK">AK</option>
-        <option value="AL">AL</option>
-        <option value="AR">AR</option>
-        <option value="AZ">AZ</option>
-        <option value="CA">CA</option>
-        <option value="CO">CO</option>
-        <option value="CT">CT</option>
-        <option value="DC">DC</option>
-        <option value="DE">DE</option>
-        <option value="FL">FL</option>
-        <option value="GA">GA</option>
-        <option value="HI">HI</option>
-        <option value="IA">IA</option>
-        <option value="ID">ID</option>
-        <option value="IL">IL</option>
-        <option value="IN">IN</option>
-        <option value="KS">KS</option>
-        <option value="KY">KY</option>
-        <option value="LA">LA</option>
-        <option value="MA">MA</option>
-        <option value="MD">MS</option>
-        <option value="ME">ME</option>
-        <option value="MI">MI</option>
-        <option value="MN">MN</option>
-        <option value="MO">MO</option>
-        <option value="MS">MS</option>
-        <option value="MT">MT</option>
-        <option value="NC">NC</option>
-        <option value="ND">ND</option>
-        <option value="NE">NE</option>
-        <option value="NH">NH</option>
-        <option value="NJ">NJ</option>
-        <option value="NM">NM</option>
-        <option value="NV">NV</option>
-        <option value="NY">NY</option>
-        <option value="OH">OH</option>
-        <option value="OK">OK</option>
-        <option value="OR">OR</option>
-        <option value="PA">PA</option>
-        <option value="PR">PR</option>
-        <option value="RI">RI</option>
-        <option value="SC">SC</option>
-        <option value="SD">SD</option>
-        <option value="TN">TN</option>
-        <option value="TX">TX</option>
-        <option value="UT">UT</option>
-        <option value="VA">VA</option>
-        <option value="VT">VT</option>
-        <option value="WA">WA</option>
-        <option value="WI">WI</option>
-        <option value="WV">WV</option>
-        <option value="WY">WY</option>
-      </datalist> -->
-    </div>
-
-    <div>
-      <label>Points to Apply to this Message:</label>
-      <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="10">+ 10 Points
-      <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="-10">- 10 Points
-      <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="0">Neutral
-    </div>
-
-
-    <div>
-      <label for="rate-driver">Select a Review or type your own:</label>
-    </div>
-    <div>
-      <input ng-model="rateDriver.message" type="text" id="message-input" placeholder="Your Thoughts" list="messages" maxlength="100" class="datalist-width datalist-style">
-      <datalist  id="messages">
-          <option value="Very courteous Driver, wish there were more like you!!!">Very courteous Driver, wish there were more like you!!!</option>
-          <option value="How about you not pull into traffic at such a slow speeds!!!">How about you not pull into traffic at such a slow speeds!!!</option>
-          <option value="Gas pedal is on the right, why don't you try to go the speed limit!!!">Gas pedal is on the right, why don't you try to go the speed limit!!!</option>
-          <option value="Get off your phone and watch the road!!!">Get off your phone and watch the road!!!</option>
-          <option value="Left Lane Loser, get over and let the rest of us pass!!!">Left Lane Loser, get over and let the rest of us pass!!!</option>
-          <option value="Hey Lead Foot, where's the fire!!!">Hey Lead Foot, where's the fire!!!</option>
-          <option velue="Next time you park this close could you please leave me a can opener!!!">Next time you park this close could you please leave me a can opener!!!</option>
-      </select>
-    </div>
-
-
-      <input class="btn btn-primary" type="submit" value="RateDriver" required/>
-
-  </div>
-</form>
+  <section class="user-nav">
+    <article class="user-header">
+      <div class="user-style">{{rateDriver.userName}}</div>
+      <div class="user-style"># {{rateDriver.plate}}</div>
+      <div class="user-style">Score: {{rateDriver.score}}</div>
+    </article>
+  </section>
 
 
 
+  <!-- <a href="#/userPage" class="btn btn-primary">Home</a>
+  <a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
+  <a href="#/searchDriver" class="btn btn-primary">Search A Driver</a>
+  <a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
+  <a href="#/help" class="btn btn-primary">Help</a>
+    <h1>Welcome {{rateDriver.userName}}</h1>
+    <h3>User Plate Number is:{{rateDriver.plate}}</h3>
+    <h3>Your Current Score is:{{rateDriver.score}}</h3> -->
+
+  <section class="content-section">
+    <h2 class="first-content">Enter License Plate Info<h2>
+    <h3 class="first-content">example(TN123-456)</h2>
+    <form ng-submit="rateDriver.sendRateInfo()">
+      <div class="form-group">
+      <!-- <label for="plate-input">Enter License Plate Info - example(TN123-456):</label> -->
+        <div>
+          <!-- name in ng-model ="" passed to register controller -->
+          <input ng-model="rateDriver.plate1" type="text" id="plate-input" placeholder="Plate#" required class="datalist-style" onkeyup="changePlateToUpperCase(this)"/>
+          <!-- <input ng-model="rateDriver.plate" type="text" id="plate-input" placeholder="Plate#" list="states" required class="datalist-style">
+          <datalist  id="states">
+            <option value="">N/A</option>
+            <option value="AK">AK</option>
+            <option value="AL">AL</option>
+            <option value="AR">AR</option>
+            <option value="AZ">AZ</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DC">DC</option>
+            <option value="DE">DE</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="IA">IA</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="MA">MA</option>
+            <option value="MD">MS</option>
+            <option value="ME">ME</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MO">MO</option>
+            <option value="MS">MS</option>
+            <option value="MT">MT</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="NE">NE</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NV">NV</option>
+            <option value="NY">NY</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="PR">PR</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VA">VA</option>
+            <option value="VT">VT</option>
+            <option value="WA">WA</option>
+            <option value="WI">WI</option>
+            <option value="WV">WV</option>
+            <option value="WY">WY</option>
+          </datalist> -->
+        </div>
+
+        <div class="radio-input-style">
+          <label class="first-content">Apply points to this Message:</label>
+          <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="10">+ 10 Points
+          <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="-10">  - 10 Points
+          <input ng-model="rateDriver.modifier" type="radio" name="msgScore" ng-value="0">  Neutral
+        </div>
 
 
-<p>View then shows 4-6 pre written messages with a +10 -10 or 0 - When submittd it add the message to the license Plate# and adjust overall score associated to the # -show date/time posted NOT by which user</p>
+        <div>
+          <label class="first-content" for="rate-driver">Select a Review or type your own:</label>
+        </div>
+        <div>
+          <input ng-model="rateDriver.message" type="text" id="message-input" placeholder="Your Thoughts" list="messages" maxlength="100" class="datalist-width datalist-style" required>
+          <datalist  id="messages">
+              <option value="Very courteous Driver, wish there were more like you!!!">Very courteous Driver, wish there were more like you!!!</option>
+              <option value="How about you not pull into traffic at such a slow speeds!!!">How about you not pull into traffic at such a slow speeds!!!</option>
+              <option value="Gas pedal is on the right, why don't you try to go the speed limit!!!">Gas pedal is on the right, why don't you try to go the speed limit!!!</option>
+              <option value="Get off your phone and watch the road!!!">Get off your phone and watch the road!!!</option>
+              <option value="Left Lane Loser, get over and let the rest of us pass!!!">Left Lane Loser, get over and let the rest of us pass!!!</option>
+              <option value="Hey Lead Foot, where's the fire!!!">Hey Lead Foot, where's the fire!!!</option>
+              <option velue="Next time you park this close could you please leave me a can opener!!!">Next time you park this close could you please leave me a can opener!!!</option>
+          </select>
+        </div>
+
+
+          <input class="btn btn-primary" type="submit" value="RateDriver"/>
+
+      </div>
+    </form>
+  </section>
+</div>
 

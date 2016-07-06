@@ -1,65 +1,31 @@
+<div class="userPage-background">
+  <nav class="page-nav">
+    <!-- Links -->
+    <ul class="page-header">
+      <li class="nav-button"><a href="#/userPage">Home</a></li>
+      <li class="nav-button"><a href="#/rateDriver">Rate</a></li>
+      <li class="nav-button"><a href="#/searchDriver">Search</a></li>
+      <li class="nav-button"><a href="#/viewLeaders">Leaders</a></li>
+      <li class="nav-button"><a href="#/help">Help</a></li>
+    </ul>
+  </nav>
 
+  <section class="user-nav">
+    <article class="user-header">
+      <div class="user-style">{{userPage.userName}}</div>
+      <div class="user-style"># {{userPage.plate}}</div>
+      <div class="user-style">Score: {{userPage.score}}</div>
+    </article>
+  </section>
 
-<!--         <nav class="page-nav">
-          <ul class="page-header">
-            <li id="home"><a href="#/userPage" class="btn btn-primary">Home</a></li>
-            <li id="rate-driver"><a href="#/rateDriver" class="btn btn-primary">Rate</a></li>
-            <li id="search-driver"><a href="#/searchDriver" class="btn btn-primary">Search</a></li>
-            <li id="view-leaders"><a href="#/viewLeaders" class="btn btn-primary">Leaders</a></li>
-            <li id="help"><a href="#/help" class="btn btn-primary">Help</a></li>
-          </ul>
-        </nav> -->
-
-        <nav class="page-nav">
-          <!-- Links -->
-          <ul class="page-header">
-            <li class="nav-button"><a href="#/userPage">Home</a></li>
-            <li class="nav-button"><a href="#/rateDriver">Rate</a></li>
-            <li class="nav-button"><a href="#/searchDriver">Search</a></li>
-            <li class="nav-button"><a href="#/viewLeaders">Leaders</a></li>
-            <li class="nav-button"><a href="#/help">Help</a></li>
-          </ul>
-        </nav>
-
-
-
-
-
-
-<!-- <a href="#/userPage" class="btn btn-primary">Home</a>
-<a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
-<a href="#/searchDriver" class="btn btn-primary">Search A Driver</a>
-<a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
-<a href="#/help" class="btn btn-primary">Help</a> -->
-
-
-
-<!--   <h1>Welcome {{userPage.userName}}</h1>
-  <h3>User Plate Number is:{{userPage.plate}}</h3>
-  <h3>Your Current Score is:{{userPage.score}}</h3> -->
-
-<!-- <div>
-  <input readonly="readonly" class="btn btn-primary" value="Welcome: {{userPage.userName}}">
-  <input readonly="readonly" class="btn btn-primary" value="Plate#: {{userPage.plate}}">
-  <input readonly="readonly" class="btn btn-primary" value="Score: {{userPage.score}}">
-</div> -->
-
-
-<section class="user-nav">
-  <article class="user-header">
-    <div class="user-style">{{userPage.userName}}</div>
-    <div class="user-style"># {{userPage.plate}}</div>
-    <div class="user-style">Score: {{userPage.score}}</div>
-  </article>
-</section>
-
-<section class="content-section">
-  <h2 class="first-content">Here's what your fellow drivers have to say:</h2>
-  <div class="message-nest" ng-repeat="messages in userPage.messages1 | orderBy: 'time':false">
-  <!-- <div class="message-nest" ng-repeat="messages in userPage.messages"> -->
-    <h4>{{messages.message}}</h4>
-    <div>
-      <h5 class="time-display">{{messages.time}}</h5>
+  <section class="content-section">
+    <h2 class="first-content">Here's what your fellow drivers have to say:</h2>
+    <div class="message-nest" ng-repeat="messages in userPage.messages1 | orderBy: 'time':true">
+    <!-- <div class="message-nest" ng-repeat="messages in userPage.messages"> -->
+      <h4>{{messages.message}}</h4>
+      <div>
+        <h5 class="time-display">{{messages.time}}</h5>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>
