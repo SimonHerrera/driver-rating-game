@@ -18,34 +18,30 @@
     </article>
   </section>
 
-<!-- <h1>Leader Board</h1>
-
-<a href="#/userPage" class="btn btn-primary">Home</a>
-<a href="#/rateDriver" class="btn btn-primary">Rate A Driver</a>
-<a href="#/searchDriver" class="btn btn-primary">Search A Driver</a>
-<a href="#/viewLeaders" class="btn btn-primary">Leaders</a>
-<a href="#/help" class="btn btn-primary">Help</a>
-  <h1>Welcome {{viewLeaders.userName}}</h1>
-  <h3>User Plate Number is:{{viewLeaders.plate}}</h3>
-  <h3>Your Current Score is:{{viewLeaders.score}}</h3> -->
-
   <section class="content-section">
     <h2 class="first-content">Here are the driving leaders:</h2>
 
-    <div class="white-text-display" ng-repeat="license in viewLeaders.leaderData | orderBy: 'score':false">
-    <!-- <div class="message-nest" ng-repeat="messages in userPage.messages"> -->
-      <h4>{{license.plate}}</h4>
-      <h4>{{license.score}}</h4>
-      <h4>{{license.city}}</h4>
-      <h4>{{license.state}}</h4>
-      <h4>{{license.zip}}</h4>
-    </div>
 
+    <table class="table white-text-display first-content content-section">
+      <thead>
+        <tr>
+          <th>Plate</th>
+          <th>Score</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="license in viewLeaders.leaderData | orderBy: '+score'">
+          <td>{{license.plate}}</td>
+          <td>{{license.score}}</td>
+          <td>{{license.city}}</td>
+          <td>{{license.state}}</td>
+          <td>{{license.zip}}</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <p>OR THEY CAN SEARCH THIS WAY LISTED BELOW</p>
-
-    <p>Maybe drop downs with all registered Cities, States and Zip Codes. Pull user that match and show their score and OVERALL ranking</p>
-
-    <p>Filters ON/OFF or Maybe add ability to click on user from here and then opens the search driver page with lic# populated - then might need a back button too but only if got there this way</p>
   </section>
 </div>
