@@ -31,6 +31,11 @@ ul {
   padding-left: 0;
 }
 
+.dotted {
+  font-size: .9em;
+  border-bottom: 3px dotted white;
+}
+
 /*-----BOOTSTRAP BUTTON MODS-----*/
 .btn-primary {
   color: #FFFFFF;
@@ -71,8 +76,6 @@ ul {
 .user-style {
   background-color: darkgray;
   color: black;
-  /*border: 1px solid white;*/
-  /*border-radius: 5px;*/
   width: 32%;
   font-size: 1.2em;
 }
@@ -80,33 +83,20 @@ ul {
 .user-style-search {
   background-color: darkgray;
   color: black;
-  /*border: 1px solid white;*/
-  /*border-radius: 5px;*/
   width: 45%;
   font-size: 1.2em;
 }
 
-/*------USER PAGE BACKGROUND-------*/
-
-
 /*-----MAIN HEADING ------*/
 .outer-wrapper {
-  /*border: 3px solid black;*/
-  /*border-radius: 5px;*/
-  /*margin-left: 20px;*/
-  /*min-width: 800px;*/
   width: 60%;
   padding-bottom: 30px;
-  /*padding-left: 10px;*/
   margin: 0 auto;
   background-color: black;
 }
 
 .wrapper {
-  min-height: 100vh; /*makes wrapper extend to bottom of view - required
-  background-color: yellow;
-  /*margin-left: 20px;*/
-  /*min-width: 800px;*/
+  min-height: 100vh;
   width: 100%;
   padding: 61px 0 0;
   margin: auto;
@@ -115,11 +105,12 @@ ul {
 
 .main-header {
   position: fixed;
-  text-align: center;
+  text-align: right;
+  padding-right: 20px;
   /*padding-top: 10px;*/
   width: 60%;
   margin: 0 auto;
-  background-color: rgba(200,200,200, .85);
+  background-color: rgba(180,180,180, .95);
 }
 
 .main-footer {
@@ -140,7 +131,6 @@ ul {
 .page-nav {
   margin: auto;
   padding-top: 15px; /*TOP OF BUTTONS*/
-  /*background-color: rgb(251, 237, 187);*/
 }
 
 /*FIX*/
@@ -157,8 +147,6 @@ ul.page-header {
   /*padding-bottom: 10px;*/
   width: 60%;
   margin: 0 auto;
-  /*padding: 0;*/
-  /*background-color: rgba(245,245,245, .85);*/
 }
 
 .user-nav div {
@@ -168,13 +156,11 @@ ul.page-header {
 .user-nav {
   margin: auto;
   padding-top: 46px;
-  /*background-color: red;*/
 }
 
 .user-header {
   position: fixed;
   text-align: center;
-  /*padding-top: 81px;*/
   width: 60%;
   margin: 0 auto;
   padding-top: 0; /*moves 3rd fixed box*/
@@ -191,6 +177,7 @@ ul.page-header {
 
 .first-content {
   padding-left: 15px;
+  padding-right: 15px;
   color: white;
 }
 
@@ -208,11 +195,10 @@ ul.page-header {
   /*border: 1px black solid;*/
   text-decoration: none;
   margin-right: -4px;
-  /*border-radius: 4px 4px 4px 4px;*/
 }
 
 .page-nav li a:hover {
-  background-color: #4F0202;
+  background-color: #43769D;
   color: white;
   transition: 0.5s ease;
 }
@@ -256,10 +242,6 @@ datalist {
   background-image: url('../img/landing.png');
   min-height: 100vh;
   color: white;
-  /*height: 100vh;*/
-  /*width: 100%;*/
-  /*padding: 75px;*/
-  /*padding-bottom: 30px;*/
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -269,15 +251,7 @@ datalist {
   color: black;
   background-size: cover;
   background-repeat: no-repeat;
-  /*height: 100vh;*/
-  /*width: 100%;*/
-  /*padding: 75px;*/
-  /*padding-bottom: 30px;*/
-/*  background-size: cover;
-  background-repeat: no-repeat;*/
 }
-
-
 
 /*------OTHER-------*/
 
@@ -295,42 +269,22 @@ input {
 }
 /* media query */
 @media only screen and (max-width: 1095px) {
-/*body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: 2.0em;
-}*/
+
 .outer-wrapper {
-/*  border: 3px solid black;
-  border-radius: 5px;*/
-  /*margin-left: 20px;*/
-  /*min-width: 800px;*/
   min-width: 730px;
   width: 100%;
   padding-bottom: 30px;
-  /*padding-left: 10px;*/
   margin: 0 auto;
   background-color: black;
 }
 
 .wrapper {
-  /*min-height: 100vh; makes wrapper extend to bottom of view - required*/
-  /*margin-left: 20px;
-  /*min-width: 800px;*/
   width: 100%;
   min-width: 730px;
-  /*padding: 71px 5px 5px;*/
-  /*padding-left: 10px;*/
-  /*margin: auto;*/
-  /*background-color: transparent;*/
 }
 
 .main-header {
-  /*z-index: 1000;*/
-  /*min-width: 800px;*/
   position: fixed;
-  text-align: center;
   width: 100%;
   min-width: 730px;
   margin: 0 auto;
@@ -338,35 +292,18 @@ input {
 }
 
 .main-footer {
-/*  margin: 0 auto;
-  position: fixed;
-  bottom: 0;
-  text-align: center;*/
   width: 100%;
   min-width: 730px;
-/*  margin: 0 auto;;
-  background-color: rgba(200,200,200, .9);*/
 }
 
 .page-header {
-/*  position: fixed;
-  text-align: center;*/
-  /*padding-top: 71px;*/
   width: 100%;
   min-width: 730px;
-/*  margin: 0 auto;
-  background-color: rgba(245,245,245, .85);*/
 }
 
 .user-header {
- /* position: fixed;
-  text-align: center;*/
-  /*padding-top: 71px;*/
   width: 100%;
   min-width: 730px;
-/*  margin: 0 auto;
-  padding: 0;
-  background-color: rgba(245,245,245, .85);*/
 }
 
 }
