@@ -1,8 +1,23 @@
-<h1>Delete - maybe a Modal later</h1>
+<div class="userPage-background">
+  <nav class="page-nav">
 
-<p>You are about to delete your user account. This will only delete your registered date. The comments and score associated to your plate will remain</p>
+    <ul class="page-header">
+      <li class="nav-button"><a href="#/userPage">Home</a></li>
+      <li class="nav-button"><a href="#/rateDriver">Rate</a></li>
+      <li class="nav-button"><a href="#/searchDriver">Search</a></li>
+      <li class="nav-button"><a href="#/viewLeaders">Leaders</a></li>
+      <li class="nav-button"><a href="#/help">Help</a></li>
+    </ul>
+  </nav>
 
-  <form ng-submit="register.deleteAccount()">
-    <input class="btn btn-primary" type="submit" value="Delete Account"/>
-  </form>
-<a href="#/help" class="btn btn-primary">Back to Help</a>
+   <section class="content-section">
+    <h2 class="first-content content-section red">WARNING! YOU ARE ABOUT TO DELETE ACCOUNT:</h2>
+      <div class="white-text-display first-content content-section">
+
+        <p>You are about to delete your user account. This will only delete your registered data. The comments and score associated to your plate will remain</p>
+      </div>
+    </section>
+    <form ng-submit="register.deleteAccount()">
+      <input class="btn btn-primary" type="submit" value="Delete Account"/>
+    </form>
+</div>

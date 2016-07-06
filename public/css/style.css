@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 2.0em;
+  color: black;
 }
 
 /*------- Link and Special Settings ---------*/
@@ -30,15 +31,63 @@ ul {
   padding-left: 0;
 }
 
+/*-----BOOTSTRAP BUTTON MODS-----*/
+.btn-primary {
+  color: #FFFFFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #141414;
+  *background-color: #141414;
+  background-image: -moz-linear-gradient(top, #9E9E9E, #141414);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#9E9E9E), to(#141414));
+  background-image: -webkit-linear-gradient(top, #9E9E9E, #141414);
+  background-image: -o-linear-gradient(top, #9E9E9E, #141414);
+  background-image: linear-gradient(to bottom, #9E9E9E, #141414);
+  background-repeat: repeat-x;
+  border-color: #141414;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9E9E9E', endColorstr='#141414', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  color: #FFFFFF;
+  background-color: #141414;
+  *background-color: #003bb3;
+}
+
+/*-----RADIO---------------------*/
+.radio-input-style {
+  color: white;
+  padding: 10px;
+  padding-right: 50px;
+  text-align: center;
+}
+
 /*---- USER GREETING DIVS--------*/
 .user-style {
   background-color: darkgray;
-  color:white;
+  color: black;
   /*border: 1px solid white;*/
   /*border-radius: 5px;*/
   width: 32%;
   font-size: 1.2em;
 }
+
+.user-style-search {
+  background-color: darkgray;
+  color: black;
+  /*border: 1px solid white;*/
+  /*border-radius: 5px;*/
+  width: 45%;
+  font-size: 1.2em;
+}
+
+/*------USER PAGE BACKGROUND-------*/
+
 
 /*-----MAIN HEADING ------*/
 .outer-wrapper {
@@ -47,10 +96,10 @@ ul {
   /*margin-left: 20px;*/
   /*min-width: 800px;*/
   width: 60%;
-  /*padding: 0px 0 100px;*/
+  padding-bottom: 30px;
   /*padding-left: 10px;*/
   margin: 0 auto;
-  background-color: transparent;
+  background-color: black;
 }
 
 .wrapper {
@@ -94,14 +143,22 @@ ul {
   /*background-color: rgb(251, 237, 187);*/
 }
 
+/*FIX*/
+ul.page-header {
+  padding: 1px 1px;
+  background-color: black;
+  border: 1px solid black;
+}
+
 .page-header {
   position: fixed;
   text-align: center;
   padding-top: 25px;
+  /*padding-bottom: 10px;*/
   width: 60%;
   margin: 0 auto;
-  padding: 0;
-  background-color: rgba(245,245,245, .85);
+  /*padding: 0;*/
+  /*background-color: rgba(245,245,245, .85);*/
 }
 
 .user-nav div {
@@ -121,27 +178,33 @@ ul {
   width: 60%;
   margin: 0 auto;
   padding-top: 0; /*moves 3rd fixed box*/
-  background-color: rgba(245,245,245, .85);
+  background-color: black;
 }
 
 .content-section {  /*-- Start of Content --*/
   padding-top: 25px;
 }
 
+.white-text-display {
+  color: white;
+}
+
 .first-content {
   padding-left: 15px;
+  color: white;
+}
+
+.red {
+  color: red;
 }
 
 /*------- NAV BUTTON STYLING--------*/
-
-
-
 .page-nav a {
   font-size: 1.2em;
   width: 100%;
-  background-color: lightgray;
+  background-color: darkgray;
   color: black;
-  padding: 12px 30px;
+  padding: 12px 20px;
   /*border: 1px black solid;*/
   text-decoration: none;
   margin-right: -4px;
@@ -149,17 +212,14 @@ ul {
 }
 
 .page-nav li a:hover {
-  background-color: darkgray;
+  background-color: #4F0202;
   color: white;
   transition: 0.5s ease;
 }
 
-
-
 /*------ Extra ----*/
-
-h1 {
-  color: darkred;
+.no-padding {
+  margin-top: 0;
 }
 
 .inline-user-info li{
@@ -181,8 +241,9 @@ datalist {
 .message-nest {
   background-color: lightgray;
   border-radius: 25px;
-  margin: 5px;
+  margin: 17px;
   padding: 10px;
+  font-size: 1.2em;
 }
 
 .btn-primary, .btn-default {
@@ -190,14 +251,50 @@ datalist {
   font-size: 1.1em;
 }
 
-.time-diplsay {
-  text-align: right;
-  display: inline-block;
+/*----LANDING BACKGROUNDS----*/
+.cover-landing {
+  background-image: url('../img/landing.png');
+  min-height: 100vh;
+  color: white;
+  /*height: 100vh;*/
+  /*width: 100%;*/
+  /*padding: 75px;*/
+  /*padding-bottom: 30px;*/
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.userPage-background {
+  background-color: black;
+  min-height: 100vh;
+  color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*height: 100vh;*/
+  /*width: 100%;*/
+  /*padding: 75px;*/
+  /*padding-bottom: 30px;*/
+/*  background-size: cover;
+  background-repeat: no-repeat;*/
 }
 
+
+
+/*------OTHER-------*/
+
+input {
+  margin: 5px 5px;
+
+}
+
+.input-box-style {
+  color: black;
+}
+
+.page-padding {
+  padding: 5px 5px;
+}
 /* media query */
 @media only screen and (max-width: 1095px) {
-
 /*body {
   width: 100%;
   margin: 0;
@@ -211,10 +308,10 @@ datalist {
   /*min-width: 800px;*/
   min-width: 730px;
   width: 100%;
-  padding: 0px 0 100px;
+  padding-bottom: 30px;
   /*padding-left: 10px;*/
   margin: 0 auto;
-  background-color: transparent;
+  background-color: black;
 }
 
 .wrapper {
@@ -272,13 +369,5 @@ datalist {
   background-color: rgba(245,245,245, .85);*/
 }
 
-
-/*---Fix at Large View--*/
-/*.user-style {
-  font-size: 1.em;
 }
 
-.page-nav a {
-  font-size: 1em;
-}*/
-}
