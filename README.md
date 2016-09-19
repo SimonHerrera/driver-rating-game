@@ -6,15 +6,15 @@ Think you are a good driver? Register and see what the drivers you share the roa
 
 ## Register or Login
 
-![Game](img/login.png)
-![Game](img/register.png)
+![Game](driver-rating-game/images/cover.png)
+![Game](driver-rating-game/images/register.png)
 
 If you are going to register, click the 'Register' button and then fill out the empty fields. Be sure to enter the state abbreviation followed by any characters letters and dashes on the plate. Click 'Register' when you are finished.
 
 
 ## Rate a Driver
 
-![Game](img/rate.png)
+![Game](driver-rating-game/images/rate.png)
 
 You can easily rate a driver by clicking the 'Rate' button and then enter the plate of the car you would like to rate.
 
@@ -25,13 +25,13 @@ Finally, select from a pre-written message or type your own. Click 'Rate Driver'
 
 ## Search for a Driver
 
-![Game](img/search.png)
+![Game](driver-rating-game/images/search.png)
 
 To search for a driver click the 'Search' button. Enter the plate you wish to search for. Be sure to enter the state abbreviation followed by any characters letters and dashes on the plate.
 
 ## View Leaderboard
 
-![Game](img/leaders.png)
+![Game](driver-rating-game/images/leaders.png)
 
 To see who the leaders are just click 'Leaders' and scroll up and down the board.
 
