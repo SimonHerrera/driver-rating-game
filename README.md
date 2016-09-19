@@ -6,15 +6,15 @@ Think you are a good driver? Register and see what the drivers you share the roa
 
 ## Register or Login
 
-![Game](driver-rating-game/images/cover.png)
-![Game](driver-rating-game/images/register.png)
+![Game](https://github.com/SimonHerrera/driver-rating-game/blob/master/images/cover.png)
+![Game](https://github.com/SimonHerrera/driver-rating-game/blob/master/images/register.png)
 
 If you are going to register, click the 'Register' button and then fill out the empty fields. Be sure to enter the state abbreviation followed by any characters letters and dashes on the plate. Click 'Register' when you are finished.
 
 
 ## Rate a Driver
 
-![Game](driver-rating-game/images/rate.png)
+![Game](https://github.com/SimonHerrera/driver-rating-game/blob/master/images/rate.png)
 
 You can easily rate a driver by clicking the 'Rate' button and then enter the plate of the car you would like to rate.
 
@@ -25,19 +25,19 @@ Finally, select from a pre-written message or type your own. Click 'Rate Driver'
 
 ## Search for a Driver
 
-![Game](driver-rating-game/images/search.png)
+![Game](https://github.com/SimonHerrera/driver-rating-game/blob/master/images/search.png)
 
 To search for a driver click the 'Search' button. Enter the plate you wish to search for. Be sure to enter the state abbreviation followed by any characters letters and dashes on the plate.
 
 ## View Leaderboard
 
-![Game](driver-rating-game/images/leaders.png)
+![Game](https://github.com/SimonHerrera/driver-rating-game/blob/master/images/leaders.png)
 
 To see who the leaders are just click 'Leaders' and scroll up and down the board.
 
 ## Help/Delete Account
 
-![Game](driver-rating-game/images/delete.png)
+![Game](https://github.com/SimonHerrera/driver-rating-game/blob/master/images/delete.png)
 
 To get help within the app, click 'Help' to read up on the game itself.
 
@@ -45,7 +45,7 @@ If you would like to delete your account, click on the 'Delete Account' button t
 
 * If you delete your account the plate and messages associated to your personal information will still remain in the database. None of your personal information will link that plate to your name. It is by design that the plate and messages remain, your fellow drivers should know how the car tied to that plate conducts itself on the road.
 
-### : View run locally
+## View run locally
 1. Create a repo
 2. Fork and then clone the project
 3. CD into the driver-rating-game folder and type 'bower install' to install dependencies.
