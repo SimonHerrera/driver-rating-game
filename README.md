@@ -4,9 +4,12 @@ Deployed site -> [Driver Rating Game](https://simonherrera.github.io/driver-rati
 
 Think you are a good driver? Register and see what the drivers you share the road with think. Ever want to communicate with the driver of the car that just cut you off? Now you can! The Driver Rating Game allows users to track license plates by state and number even if that plate is not attached to a registered user. When a driver registers their plate if it matches an existing one it is then paired to that driver allowing them to see exactly where they stand.
 
-## Register or Login
+## Welcome to the Driver Rating Game
 
 ![Game](https://github.com/SimonHerrera/driver-rating-game/blob/master/images/cover.png)
+
+## Register or Login
+
 ![Game](https://github.com/SimonHerrera/driver-rating-game/blob/master/images/register.png)
 
 If you are going to register, click the 'Register' button and then fill out the empty fields. Be sure to enter the state abbreviation followed by any characters letters and dashes on the plate. Click 'Register' when you are finished.
