@@ -37,7 +37,7 @@ To see who the leaders are just click 'Leaders' and scroll up and down the board
 
 ## Help/Delete Account
 
-![Game](img/delete.png)
+![Game](driver-rating-game/images/delete.png)
 
 To get help within the app, click 'Help' to read up on the game itself.
 
