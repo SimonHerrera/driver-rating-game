@@ -17,7 +17,6 @@ angular.module('driving')
         rateDriver.userName = currentUserObj[key].userName;
         rateDriver.plate = currentUserObj[key].plate;
         rateDriver.score = currentUserObj[key].score;
-          // $timeout() - This is causing an error - but still works
       }
     });
 

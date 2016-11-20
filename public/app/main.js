@@ -45,7 +45,8 @@ function changeToUpperCaseCity(t) {
 function changeToUpperCaseState(t) {
   var eleVal = document.getElementById(t.id);
     eleVal.value = eleVal.value.toLowerCase();
-    eleVal.value = eleVal.value.replace(/(?:\b)(\w)/g, function(str, p1) { return p1.toUpperCase()})
+    eleVal.value = eleVal.value.replace(/(?:\b)(\w)/g, function(str, p1)
+      { return p1.toUpperCase()})
 }
 
 function changeZipCode(t) {
