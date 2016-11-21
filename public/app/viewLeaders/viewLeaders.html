@@ -1,0 +1,47 @@
+<div class="userPage-background">
+  <nav class="page-nav">
+    <!-- Links -->
+    <ul class="page-header">
+      <li class="nav-button"><a href="#/userPage">Home</a></li>
+      <li class="nav-button"><a href="#/rateDriver">Rate</a></li>
+      <li class="nav-button"><a href="#/searchDriver">Search</a></li>
+      <li class="nav-button"><a href="#/viewLeaders">Leaders</a></li>
+      <li class="nav-button"><a href="#/help">Help</a></li>
+    </ul>
+  </nav>
+
+  <section class="user-nav">
+    <article class="user-header">
+      <div class="user-style">{{viewLeaders.userName}}</div>
+      <div class="user-style"># {{viewLeaders.plate}}</div>
+      <div class="user-style">Score: {{viewLeaders.score}}</div>
+    </article>
+  </section>
+
+  <section class="content-section">
+    <h2 class="first-content">Here are the driving leaders:</h2>
+
+
+    <table class="table white-text-display first-content content-section">
+      <thead>
+        <tr>
+          <th>Plate</th>
+          <th>Score</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="license in viewLeaders.leaderData | orderBy: '+score'">
+          <td>{{license.plate}}</td>
+          <td>{{license.score}}</td>
+          <td>{{license.city}}</td>
+          <td>{{license.state}}</td>
+          <td>{{license.zip}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+</div>
