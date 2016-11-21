@@ -253,6 +253,13 @@ datalist {
   background-repeat: no-repeat;
 }
 
+.delete-background {
+  background-image: url('../img/delete1.png');
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /*------OTHER-------*/
 
 input {
