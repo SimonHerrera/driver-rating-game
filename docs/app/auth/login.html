@@ -1,0 +1,13 @@
+<div class="cover-landing">
+  <section class="page-padding">
+    <h1 class="no-padding">Welcome Back!</h1>
+
+    <p>Enter your user name and password</p>
+
+      <form ng-submit="auth.login()">
+        <input class="input-box-style" type="email" ng-model="auth.user.email" placeholder="email" />
+        <input class="input-box-style" type="password" ng-model="auth.user.password" placeholder="password" />
+        <input class="btn btn-primary" type="submit" value="Login"/>
+      </form>
+  </section>
+</div>

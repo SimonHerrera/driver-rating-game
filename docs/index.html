@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rate My Driving(games)</title>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+  </head>
+  <body>
+    <article class="outer-wrapper">
+
+      <nav class="main-header">
+
+<!--         <div class="container-fluid">
+          <div class="navbar-header"> -->
+
+            <!-- <a href="#/" class="nav-left"><img src="img/crash.png"></a> -->
+            <a href="#/" id="logout" class="btn btn-default btn-primary navbar-btn">Logout</a>
+          </div>
+        </div>
+      </nav>
+      <section class="wrapper">
+        <div ng-app="driving">
+            <div ng-view>
+            </div>
+        </div>
+      </section>
+
+    <footer class="main-footer">
+      <p>&copy; 2016 Rate My Driving (game)</p>
+    </footer>
+    </article> <!-- End outer-wrapper -->
+
+    <!-- Dependency Scripts -->
+    <script src="lib/angular/angular.min.js" type="text/javascript"></script>
+    <script src="lib/angular-route/angular-route.min.js" type="text/javascript"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/firebase/firebase.js" type="text/javascript"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <!-- User Scripts -->
+    <script src="app/main.js" type="text/javascript"></script>
+    <script src="app/firebase.config.js" type="text/javascript"></script>
+    <script src="app/config.js" type="text/javascript"></script>
+    <script src="app/constants.js" type="text/javascript"></script>
+    <script src="app/auth/authFactory.js" type="text/javascript"></script>
+    <script src="app/auth/login.ctrl.js" type="text/javascript"></script>
+    <script src="app/auth/register.ctrl.js" type="text/javascript"></script>
+    <script src="app/help/helpFactory.js" type="text/javascript"></script>
+    <script src="app/help/help.ctrl.js" type="text/javascript"></script>
+    <script src="app/landing/landing.ctrl.js" type="text/javascript"></script>
+    <script src="app/rateDriver/rateDriverFactory.js" type="text/javascript"></script>
+    <script src="app/rateDriver/rateDriver.ctrl.js" type="text/javascript"></script>
+    <script src="app/searchDriver/searchDriverFactory.js" type="text/javascript"></script>
+    <script src="app/searchDriver/searchDriver.ctrl.js" type="text/javascript"></script>
+    <script src="app/userPage/userPageFactory.js" type="text/javascript"></script>
+    <script src="app/userPage/userPage.ctrl.js" type="text/javascript"></script>
+    <script src="app/viewLeaders/viewLeadersFactory.js" type="text/javascript"></script>
+    <script src="app/viewLeaders/viewLeaders.ctrl.js" type="text/javascript"></script>
+  </body>
+</html>
